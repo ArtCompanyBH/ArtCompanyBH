@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leão Colorido 4K 20X30CM | Art Company BH</title>
+    <title>Mulher com tinta 4K 20X30CM | Art Company BH</title>
     <style>
         :root {
             --primary-color: #000000;
@@ -24,77 +24,87 @@
             color: var(--primary-color);
         }
 
-/* Estilos das avaliações */
-.rating-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
+        /* Estilos do Cabeçalho (Header) */
+        .header {
+            background-color: #000000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
 
-.overall-rating {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-.star-rating {
-    color: #ffb300;
-    font-size: 1.4rem;
-    letter-spacing: 2px;
-    display: inline-flex;
-}
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
 
-.rating-number {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--primary-color);
-}
+        .logo-img {
+            width: 80px;
+            height: 50px;
+            margin-right: 50px;
+        }
 
-.review-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
-}
+        .logo-text {
+            font-family: 'Libre Bodoni', serif;
+            font-size: auto;
+            color: #FFF;
+            letter-spacing: 2px;
+        }
 
-.review .star-rating {
-    font-size: 1.1rem;
-}
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
 
-/* Melhorar visual das estrelas usando SVG */
-.star-rating {
-    display: inline-flex;
-    gap: 2px;
-}
+        .nav-links a {
+            text-decoration: none;
+            color: #b8860b;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
 
-.star-rating svg {
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
-}
+        .nav-links a:hover {
+            color: #FFD700;
+        }
 
-@media (max-width: 480px) {
-    .rating-header {
-        flex-direction: column;
-        align-items: start;
-        gap: 0.5rem;
-    }
-    
-    .review-header {
-        flex-wrap: wrap;
-        gap: 0.5rem;
-    }
-    
-    .star-rating {
-        font-size: 1.1rem;
-    }
-}
+        /* Estilos do Produto */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 80px; /* Espaço para o cabeçalho fixo */
+        }
 
-/* Novos estilos do carrossel */
+        .product-header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
         .product-image {
-            position: relative;
+            flex: 1;
+            min-width: 300px;
+            max-width: 100%;
             overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            position: relative;
         }
 
         .carousel-container {
@@ -141,105 +151,6 @@
             border-radius: 5px 0 0 5px;
         }
 
-        /* Remover efeito de hover da imagem original */
-        .product-image:hover img {
-            transform: none;
-        }
-
-
-        /* Estilos do Cabeçalho (Header) */
-        .header {
-            background-color: #000000;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 1rem 2rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: #333;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .logo-img {
-            width: 80px;
-            height: 50px;
-            margin-right: 50px;
-        }
-
-        .logo-text {
-    font-family: 'Libre Bodoni', serif;
-    font-size: auto;
-    color: #FFF;
-    letter-spacing: 2px;
-    
-}
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #b8860b;
-            font-size: 1rem;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #FFD700;
-        }
-
-        /* Estilos do Produto */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            margin-top: 80px; /* Espaço para o cabeçalho fixo */
-        }
-
-        .product-header {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .product-image {
-            flex: 1;
-            min-width: 300px;
-            max-width: 100%;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .product-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        .product-image:hover img {
-            transform: scale(1.1); /* Efeito de zoom */
-        }
-
         .product-details {
             flex: 1;
             min-width: 300px;
@@ -279,6 +190,41 @@
 
         .product-specs ul li {
             margin-bottom: 0.5rem;
+        }
+
+        /* Estilos para seletor de tamanhos */
+        .size-selector {
+            margin: 1.5rem 0;
+        }
+
+        .size-options {
+            display: flex;
+            gap: 1rem;
+            margin: 0.5rem 0;
+        }
+
+        .size-option input[type="radio"] {
+            display: none;
+        }
+
+        .size-button {
+            display: block;
+            padding: 0.8rem 1.5rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-color: #f8f9fa;
+        }
+
+        .size-option input[type="radio"]:checked + .size-button {
+            border-color: var(--secondary-color);
+            background-color: rgba(184, 134, 11, 0.1);
+            font-weight: bold;
+        }
+
+        .size-button:hover {
+            background-color: rgba(184, 134, 11, 0.05);
         }
 
         .buy-button {
@@ -325,6 +271,78 @@
             line-height: 1.6;
             color: #555;
         }
+
+        /* Estilos das avaliações */
+        .rating-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .overall-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .star-rating {
+            color: #ffb300;
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            display: inline-flex;
+        }
+
+        .rating-number {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .review .star-rating {
+            font-size: 1.1rem;
+        }
+        
+        .benefits-section {
+        margin: 3rem 0;
+        padding: 2rem;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-top: 1.5rem;
+    }
+
+    .benefit {
+        text-align: center;
+    }
+
+    .benefit span {
+        font-size: 2rem;
+    }
+
+    .benefit h3 {
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+        color: var(--primary-color);
+    }
+
+    .benefit p {
+        font-size: 0.9rem;
+        color: #555;
+    }
 
         /* Responsividade */
         @media (max-width: 768px) {
@@ -379,33 +397,34 @@
                 font-size: 0.9rem;
             }
         }
-        
+
         /* Estilos para o logotipo fixo */
         .fixed-logo {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            width: 50px; /* Tamanho menor */
+            width: 50px;
             height: 50px;
             z-index: 1000;
             transition: transform 0.3s ease;
         }
 
-.fixed-logo2 {
+        .fixed-logo2 {
             position: fixed;
             bottom: 20px;
             right: 85px;
-            width: 50px; /* Tamanho menor */
+            width: 50px;
             height: 50px;
             z-index: 1000;
             transition: transform 0.3s ease;
         }
 
         .fixed-logo:hover {
-            transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+            transform: scale(1.1);
         }
+
         .fixed-logo2:hover {
-            transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -471,7 +490,7 @@
 
             <div class="product-details">
                 <h1 class="product-title">Mulher com tinta 4k 20X30CM</h1>
-                <p class="product-price">R$ 24,90</p>
+                <p class="product-price">R$ <span id="dynamic-price">24,90</span></p>
                 <p class="product-description">
                     Este quadro decorativo em tela apresenta um leão colorido em alta resolução, perfeito para adicionar um toque de elegância e modernidade ao seu espaço. Ideal para salas de estar, escritórios ou quartos.
                 </p>
@@ -483,57 +502,96 @@
                         <li><strong>Acabamento:</strong> Premium</li>
                         <li><strong>Peso:</strong> 500g</li>
                     </ul>
+
+                    <!-- Seletor de Tamanhos -->
+                    <div class="size-selector">
+                        <h4>Selecione o tamanho:</h4>
+                        <div class="size-options">
+                            <label class="size-option">
+                                <input type="radio" name="size" value="20x30" data-price="24.90" data-link="page2.html" checked>
+                                <span class="size-button">20x30 cm</span>
+                            </label>
+                            
+                            <label class="size-option">
+                                <input type="radio" name="size" value="60x40" data-price="299.90" data-link="page2.html">
+                                <span class="size-button">60x40 cm</span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
-                <a href="#" class="buy-button">Comprar Agora</a>
+                <a href="https://pagamento.com/20x30" class="buy-button" id="buy-button">Comprar Agora</a>
             </div>
         </div>
 
-        <!-- Avaliações de Clientes -->
-<div class="customer-reviews">
-    <div class="rating-header">
-        <h2>Avaliações de Clientes</h2>
-        <div class="overall-rating">
-            <div class="star-rating">
-                ★★★★★
-            </div>
-            <span class="rating-number">5.0</span>
+<div class="benefits-section">
+    <h2>Por que escolher este produto?</h2>
+    <div class="benefits-grid">
+        <div class="benefit">
+            <span>🎨</span>
+            <h3>Design Exclusivo</h3>
+            <p>Arte única que transforma qualquer ambiente.</p>
         </div>
-    </div>
-    
-    <div class="review">
-        <div class="review-header">
-            <h3>Maria Silva A.L.</h3>
-            <div class="star-rating">
-                ★★★★★
-            </div>
+        <div class="benefit">
+            <span>🚚</span>
+            <h3>Entrega Rápida</h3>
+            <p>Receba seu produto em até 5 dias úteis.</p>
         </div>
-        <p>"Adorei o quadro! A qualidade da tela é incrível, e as cores são vibrantes. Combinou perfeitamente com a decoração da minha sala."</p>
-    </div>
-
-    <div class="review">
-        <div class="review-header">
-            <h3>João F.P.</h3>
-            <div class="star-rating">
-                ★★★★★
-            </div>
+        <div class="benefit">
+            <span>💎</span>
+            <h3>Alta Qualidade</h3>
+            <p>Feito com materiais duráveis e premium.</p>
         </div>
-        <p>"Produto chegou antes do prazo e superou minhas expectativas. Recomendo a todos que buscam um quadro de qualidade."</p>
-    </div>
-
-    <div class="review">
-        <div class="review-header">
-            <h3>Ana C.R.R.</h3>
-            <div class="star-rating">
-                ★★★★★
-            </div>
-        </div>
-        <p>"Ótimo custo-benefício. O leão colorido é lindo e chama a atenção de todos que visitam minha casa."</p>
     </div>
 </div>
-<!-- Logotipo fixo na parte inferior direita -->
+
+        <!-- Avaliações de Clientes -->
+        <div class="customer-reviews">
+            <div class="rating-header">
+                <h2>Avaliações de Clientes</h2>
+                <div class="overall-rating">
+                    <div class="star-rating">
+                        ★★★★★
+                    </div>
+                    <span class="rating-number">5.0</span>
+                </div>
+            </div>
+            
+            <div class="review">
+                <div class="review-header">
+                    <h3>Maria Silva A.L.</h3>
+                    <div class="star-rating">
+                        ★★★★★
+                    </div>
+                </div>
+                <p>"Adorei o quadro! A qualidade da tela é incrível, e as cores são vibrantes. Combinou perfeitamente com a decoração da minha sala."</p>
+            </div>
+
+            <div class="review">
+                <div class="review-header">
+                    <h3>João F.P.</h3>
+                    <div class="star-rating">
+                        ★★★★★
+                    </div>
+                </div>
+                <p>"Produto chegou antes do prazo e superou minhas expectativas. Recomendo a todos que buscam um quadro de qualidade."</p>
+            </div>
+
+            <div class="review">
+                <div class="review-header">
+                    <h3>Ana C.R.R.</h3>
+                    <div class="star-rating">
+                        ★★★★★
+                    </div>
+                </div>
+                <p>"Ótimo custo-benefício. O leão colorido é lindo e chama a atenção de todos que visitam minha casa."</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logotipo fixo na parte inferior direita -->
     <a href="https://wa.me/5531993639544/?text=Tenho%20interesse%20em%20comprar%20um%20quadro%20decorativo" target="_blank" rel="noopener noreferrer">
         <img src="https://cdn-icons-png.flaticon.com/512/4494/4494494.png" 
-             alt="Logo da Art Company BH" 
+                         alt="Logo da Art Company BH" 
              class="fixed-logo">
     </a>
     <!-- Logotipo fixo na parte inferior direita -->
@@ -543,7 +601,6 @@
              class="fixed-logo2">
     </a>
 
-    </div>
     <script>
         // Script do Carrossel
         const carouselContainer = document.querySelector('.carousel-container');
@@ -565,7 +622,20 @@
             currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
             updateCarousel();
         });
-    </script>
 
+        // Script para atualizar preço e link de compra
+        document.querySelectorAll('.size-option input').forEach(radio => {
+            radio.addEventListener('change', () => {
+                if(radio.checked) {
+                    // Atualizar preço
+                    document.getElementById('dynamic-price').textContent = 
+                        radio.dataset.price.replace('.', ',');
+                    
+                    // Atualizar link de compra
+                    document.getElementById('buy-button').href = radio.dataset.link;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
