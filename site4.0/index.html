@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Company BH | Quadros Exclusivos</title>
+    <style>
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #b8860b;
+            --light-color: #ecf0f1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        .header {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--light-color);
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--light-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://acdn-us.mitiendanube.com/stores/860/024/products/leaonesortea1-3e5ced57448e04f64916508394602939-1024-1024.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--light-color);
+            margin-top: 60px;
+        }
+
+.hero-content p {
+            font-size: 1.0rem;
+            margin-bottom: 2rem;
+        }
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--secondary-color);
+            color: var(--light-color);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #c0392b;
+        }
+
+        .products-section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .zap {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-price {
+            color: green;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .contact-section {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #000000;
+            color: var(--light-color);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .header {
+            background-color: #000000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo-img {
+            width: 80px; /* Ajuste o tamanho conforme necessário */
+            height: 50px;
+            margin-right: 50px;
+        }
+
+        .logo-text {
+            font-family: 'Arial', sans-serif;
+            color: #FFF;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #b8860b;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #FFD700; /* Cor de destaque ao passar o mouse */
+        }
+
+        /* Estilos da seção "Sobre" */
+        .about-section {
+            position: relative;
+            padding: 5rem 2rem;
+            background-image: url('https://via.placeholder.com/1920x600'); /* Adicione o caminho da sua imagem */
+            background-size: cover;
+            background-position: center;
+            color: var(--light-color);
+            text-align: center;
+        }
+
+        .about-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Overlay escuro com 50% de opacidade */
+            z-index: 1;
+        }
+
+        .about-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #fff;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Estilos para o logotipo fixo */
+        .fixed-logo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px; /* Tamanho menor */
+            height: 50px;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+.fixed-logo2 {
+            position: fixed;
+            bottom: 20px;
+            right: 85px;
+            width: 50px; /* Tamanho menor */
+            height: 50px;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .fixed-logo:hover {
+            transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+        }
+        .fixed-logo2:hover {
+            transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">
+                <!-- Logo -->
+                <img src="https://pps.whatsapp.net/v/t61.24694-24/473407576_1645914472694714_376084873317419995_n.jpg?ccb=11-4&oh=01_Q5AaIWZLh6wKIhbeDENV_qYt9XBVptoKtYrua6W61Gn3uM-i&oe=67E5FE19&_nc_sid=5e03e0&_nc_cat=104" 
+                     alt="Logo da Art Company BH" 
+                     class="logo-img">
+                <!-- Texto -->
+                <span class="logo-text">Art Company BH</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="#produtos">Produtos</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Transforme Seus Ambientes com Arte</h1>
+            <p>Quadros decorativos exclusivos para sua casa ou escritório</p>
+            <a href="#produtos" class="cta-button">Ver Catálogo Digital</a>
+        </div>
+    </section>
+
+    <section id="produtos" class="products-section">
+        <h2 class="section-title">Nossas Coleções</h2>
+        <div class="products-grid">
+            <!-- Repetir esse bloco para cada produto -->
+            <div class="product-card">
+               <a href="page1.html"> <!-- Link para a página do produto -->
+                <img src="https://lojagiftup.com.br/image/cache/catalog/produtos/15431-550x550.webp" alt="Quadro Moderno" class="product-image">
+                <div class="product-info">
+                    <h3>Leão Colorido 4K 20X30CM</h3>
+                    </a>
+                    <p>Quadro em tela com acabamento premium</p>
+                    <p class="product-price">R$ 24,90</p>
+                </div>
+            </div>
+            <!-- Adicionar mais produtos aqui -->
+            <div class="product-card">
+                <img src="https://images.tcdn.com.br/img/img_prod/81/quadro_decorativo_em_canvas_cavalo_de_perfil_61146_1_e67a508cac3b4364f8262541a7574d07.jpg" alt="Quadro Moderno" class="product-image">
+                <div class="product-info">
+                    <h3>Cavalo marrom 4K 60X40CM</h3>
+                    <p>Quadro em tela com acabamento premium</p>
+                    <p class="product-price">R$ 385,90</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.tcdn.com.br/img/img_prod/81/quadro_decorativo_em_canvas_cavalo_de_perfil_61146_1_e67a508cac3b4364f8262541a7574d07.jpg" alt="Quadro Moderno" class="product-image">
+                <div class="product-info">
+                    <h3>Cavalo marrom 4K 60X40CM</h3>
+                    <p>Quadro em tela com acabamento premium</p>
+                    <p class="product-price">R$ 385,90</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.tcdn.com.br/img/img_prod/81/quadro_decorativo_em_canvas_cavalo_de_perfil_61146_1_e67a508cac3b4364f8262541a7574d07.jpg" alt="Quadro Moderno" class="product-image">
+                <div class="product-info">
+                    <h3>Cavalo marrom 4K 60X40CM</h3>
+                    <p>Quadro em tela com acabamento premium</p>
+                    <p class="product-price">R$ 385,90</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.tcdn.com.br/img/img_prod/81/quadro_decorativo_em_canvas_cavalo_de_perfil_61146_1_e67a508cac3b4364f8262541a7574d07.jpg" alt="Quadro Moderno" class="product-image">
+                <div class="product-info">
+                    <h3>Cavalo marrom 4K 60X40CM</h3>
+                    <p>Quadro em tela com acabamento premium</p>
+                    <p class="product-price">R$ 385,90</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.tcdn.com.br/img/img_prod/81/quadro_decorativo_em_canvas_cavalo_de_perfil_61146_1_e67a508cac3b4364f8262541a7574d07.jpg" alt="Quadro Moderno" class="product-image">
+                <div class="product-info">
+                    <h3>Cavalo marrom 4K 60X40CM</h3>
+                    <p>Quadro em tela com acabamento premium</p>
+                    <p class="product-price">R$ 385,90</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.tcdn.com.br/img/img_prod/81/quadro_decorativo_em_canvas_cavalo_de_perfil_61146_1_e67a508cac3b4364f8262541a7574d07.jpg" alt="Quadro Moderno" class="product-image">
+                <div class="product-info">
+                    <h3>Cavalo marrom 4K 60X40CM</h3>
+                    <p>Quadro em tela com acabamento premium</p>
+                    <p class="product-price">R$ 385,90</p>
+                </div>
+            </div>
+            <div class="product-card">
+            <a href="page2.html">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_844373-MLB49494676441_032022-O.webp" alt="Quadro Moderno" class="product-image">
+                <div class="product-info">
+                    <h3>Mulher com tinta 4K 20X30CM</h3>
+                    </a>
+                    <p>Quadro em tela com acabamento premium</p>
+                    <p class="product-price">R$ 24,90</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.tcdn.com.br/img/img_prod/81/quadro_decorativo_em_canvas_cavalo_de_perfil_61146_1_e67a508cac3b4364f8262541a7574d07.jpg" alt="Quadro Moderno" class="product-image">
+                <div class="product-info">
+                    <h3>Cavalo marrom 4K 60X40CM</h3>
+                    <p>Quadro em tela com acabamento premium</p>
+                    <p class="product-price">R$ 385,90</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://www.quickgrafica.com.br/uploads/produtos/quadro-decorativo-tela-em-canvas-torre-eiffel-1-paisagem-tela-em-tecido-canvas-moldura-interna-de-ma-16300106826692504606127fd3ab752a.jpg" alt="Quadro Moderno" class="product-image">
+                <div class="product-info">
+                    <h3>Torre Eiffel 4K 60X40CM</h3>
+                    <p>Quadro em tela com acabamento premium</p>
+                    <p class="product-price">R$ 385,90</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contact-section">
+        <div class="whats-container">
+            <a href="https://wa.me/5531993639544/?text=Tenho%20interesse%20em%20comprar%20um%20quadro%20decorativo" 
+               target="_blank"
+               rel="noopener noreferrer"
+               class="whatsapp-link"
+               aria-label="Abrir conversa no WhatsApp">
+                
+                <img src="https://cdn-icons-png.flaticon.com/512/4494/4494494.png" 
+                     alt="Ícone do WhatsApp para contato"
+                     class="whatsapp-icon"
+                     width="80"
+                     height="80"
+                     loading="lazy">
+            </a>
+
+            <div class="contact-instruction">
+                <h3>Clique no ícone acima e fale com nossa equipe<br>pelo WhatsApp!</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção "Sobre" adicionada aqui -->
+    <section id="sobre" class="about-section">
+        <div class="about-overlay"></div> <!-- Overlay para escurecer a imagem de fundo -->
+        <div class="about-content">
+            <h2 class="about-title">Sobre</h2>
+            <p class="about-text">
+                A Art Company BH é especializada em quadros decorativos de alta qualidade, trazendo arte e 
+                sofisticação para o seu espaço. Com anos de experiência no mercado, nossa equipe está pronta para 
+                transformar seus ambientes com peças exclusivas e personalizadas.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Art Company BH - Todos os direitos reservados</p>
+        <div class="social-links">
+            <!-- Adicionar ícones de redes sociais -->
+        </div>
+    </footer>
+
+    <!-- Logotipo fixo na parte inferior direita -->
+    <a href="https://wa.me/5531993639544/?text=Tenho%20interesse%20em%20comprar%20um%20quadro%20decorativo" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn-icons-png.flaticon.com/512/4494/4494494.png" 
+             alt="Logo da Art Company BH" 
+             class="fixed-logo">
+    </a>
+    <!-- Logotipo fixo na parte inferior direita -->
+    <a href="https://www.instagram.com/artcompany.bh/" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" 
+             alt="Logo da Art Company BH" 
+             class="fixed-logo2">
+    </a>
+</body>
+</html>

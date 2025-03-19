@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leão Colorido 4K 20X30CM | Art Company BH</title>
+    <style>
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #b8860b;
+            --light-color: #ecf0f1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+        }
+
+/* Estilos das avaliações */
+.rating-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.overall-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.star-rating {
+    color: #ffb300;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    display: inline-flex;
+}
+
+.rating-number {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.review .star-rating {
+    font-size: 1.1rem;
+}
+
+/* Melhorar visual das estrelas usando SVG */
+.star-rating {
+    display: inline-flex;
+    gap: 2px;
+}
+
+.star-rating svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+@media (max-width: 480px) {
+    .rating-header {
+        flex-direction: column;
+        align-items: start;
+        gap: 0.5rem;
+    }
+    
+    .review-header {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .star-rating {
+        font-size: 1.1rem;
+    }
+}
+
+/* Novos estilos do carrossel */
+        .product-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            position: relative;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+            z-index: 10;
+            transition: background-color 0.3s;
+        }
+
+        .carousel-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .carousel-prev {
+            left: 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .carousel-next {
+            right: 0;
+            border-radius: 5px 0 0 5px;
+        }
+
+        /* Remover efeito de hover da imagem original */
+        .product-image:hover img {
+            transform: none;
+        }
+
+
+        /* Estilos do Cabeçalho (Header) */
+        .header {
+            background-color: #000000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo-img {
+            width: 80px;
+            height: 50px;
+            margin-right: 50px;
+        }
+
+        .logo-text {
+            font-family: 'Arial', sans-serif;
+            color: #FFFFFF;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #b8860b;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #FFD700;
+        }
+
+        /* Estilos do Produto */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 80px; /* Espaço para o cabeçalho fixo */
+        }
+
+        .product-header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .product-image {
+            flex: 1;
+            min-width: 300px;
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .product-image:hover img {
+            transform: scale(1.1); /* Efeito de zoom */
+        }
+
+        .product-details {
+            flex: 1;
+            min-width: 300px;
+            padding: 1rem;
+        }
+
+        .product-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .product-price {
+            font-size: 2rem;
+            color: green;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .product-specs {
+            margin-bottom: 2rem;
+        }
+
+        .product-specs h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-specs ul {
+            list-style: none;
+        }
+
+        .product-specs ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .buy-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--secondary-color);
+            color: var(--light-color);
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-button:hover {
+            background-color: #c0392b;
+        }
+
+        .customer-reviews {
+            margin-top: 3rem;
+        }
+
+        .customer-reviews h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .review {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .review h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .review p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .product-header {
+                flex-direction: column;
+            }
+
+            .product-image {
+                max-width: 100%;
+            }
+
+            .product-title {
+                font-size: 2rem;
+            }
+
+            .product-price {
+                font-size: 1.8rem;
+            }
+
+            .product-description {
+                font-size: 1rem;
+            }
+
+            .buy-button {
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-title {
+                font-size: 1.8rem;
+            }
+
+            .product-price {
+                font-size: 1.5rem;
+            }
+
+            .product-description {
+                font-size: 0.9rem;
+            }
+
+            .review h3 {
+                font-size: 1.1rem;
+            }
+
+            .review p {
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Estilos para o logotipo fixo */
+        .fixed-logo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px; /* Tamanho menor */
+            height: 50px;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+.fixed-logo2 {
+            position: fixed;
+            bottom: 20px;
+            right: 85px;
+            width: 50px; /* Tamanho menor */
+            height: 50px;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .fixed-logo:hover {
+            transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+        }
+        .fixed-logo2:hover {
+            transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://pps.whatsapp.net/v/t61.24694-24/473407576_1645914472694714_376084873317419995_n.jpg?ccb=11-4&oh=01_Q5AaIWZLh6wKIhbeDENV_qYt9XBVptoKtYrua6W61Gn3uM-i&oe=67E5FE19&_nc_sid=5e03e0&_nc_cat=104" 
+                     alt="Logo da Art Company BH" 
+                     class="logo-img">
+                <span class="logo-text">Art Company BH</span>
+            </a>
+            <div class="nav-links">
+              <a href="index.html">Início</a>
+                <a href="index.html#produtos">Produtos</a>
+                <a href="index.html#sobre">Sobre</a>
+                <a href="index.html#contato">Contato</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo da Página do Produto -->
+    <div class="container">
+        <!-- Cabeçalho do Produto -->
+        <div class="product-header">
+            <div class="product-image">
+                <div class="carousel-container">
+                    <div class="carousel-item">
+                        <img src="https://lojagiftup.com.br/image/cache/catalog/produtos/15431-550x550.webp" >
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://lojagiftup.com.br/image/cache/catalog/produtos/15431-550x550.webp" >
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://lojagiftup.com.br/image/cache/catalog/produtos/15431-550x550.webp" >
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://lojagiftup.com.br/image/cache/catalog/produtos/15431-550x550.webp" >
+                    </div>
+                </div>
+                <button class="carousel-button carousel-prev">&#10094;</button>
+                <button class="carousel-button carousel-next">&#10095;</button>
+            </div>
+
+            <div class="product-details">
+                <h1 class="product-title">Leão Colorido 4K 20X30CM</h1>
+                <p class="product-price">R$ 24,90</p>
+                <p class="product-description">
+                    Este quadro decorativo em tela apresenta um leão colorido em alta resolução, perfeito para adicionar um toque de elegância e modernidade ao seu espaço. Ideal para salas de estar, escritórios ou quartos.
+                </p>
+                <div class="product-specs">
+                    <h3>Especificações:</h3>
+                    <ul>
+                        <li><strong>Dimensões:</strong> 20x30cm</li>
+                        <li><strong>Material:</strong> Tela de alta qualidade</li>
+                        <li><strong>Acabamento:</strong> Premium</li>
+                        <li><strong>Peso:</strong> 500g</li>
+                    </ul>
+                </div>
+                <a href="#" class="buy-button">Comprar Agora</a>
+            </div>
+        </div>
+
+        <!-- Avaliações de Clientes -->
+<div class="customer-reviews">
+    <div class="rating-header">
+        <h2>Avaliações de Clientes</h2>
+        <div class="overall-rating">
+            <div class="star-rating">
+                ★★★★★
+            </div>
+            <span class="rating-number">5.0</span>
+        </div>
+    </div>
+    
+    <div class="review">
+        <div class="review-header">
+            <h3>Maria Silva A.L.</h3>
+            <div class="star-rating">
+                ★★★★★
+            </div>
+        </div>
+        <p>"Adorei o quadro! A qualidade da tela é incrível, e as cores são vibrantes. Combinou perfeitamente com a decoração da minha sala."</p>
+    </div>
+
+    <div class="review">
+        <div class="review-header">
+            <h3>João F.P.</h3>
+            <div class="star-rating">
+                ★★★★★
+            </div>
+        </div>
+        <p>"Produto chegou antes do prazo e superou minhas expectativas. Recomendo a todos que buscam um quadro de qualidade."</p>
+    </div>
+
+    <div class="review">
+        <div class="review-header">
+            <h3>Ana C.R.R.</h3>
+            <div class="star-rating">
+                ★★★★★
+            </div>
+        </div>
+        <p>"Ótimo custo-benefício. O leão colorido é lindo e chama a atenção de todos que visitam minha casa."</p>
+    </div>
+</div>
+<!-- Logotipo fixo na parte inferior direita -->
+    <a href="https://wa.me/5531993639544/?text=Tenho%20interesse%20em%20comprar%20um%20quadro%20decorativo" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn-icons-png.flaticon.com/512/4494/4494494.png" 
+             alt="Logo da Art Company BH" 
+             class="fixed-logo">
+    </a>
+    <!-- Logotipo fixo na parte inferior direita -->
+    <a href="https://www.instagram.com/artcompany.bh/" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" 
+             alt="Logo da Art Company BH" 
+             class="fixed-logo2">
+    </a>
+
+    </div>
+    <script>
+        // Script do Carrossel
+        const carouselContainer = document.querySelector('.carousel-container');
+        const items = document.querySelectorAll('.carousel-item');
+        const prevButton = document.querySelector('.carousel-prev');
+        const nextButton = document.querySelector('.carousel-next');
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+            updateCarousel();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+            updateCarousel();
+        });
+    </script>
+
+</body>
+</html>
