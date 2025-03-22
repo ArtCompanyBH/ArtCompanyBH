@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro Decorativo Jesus orando 4k | Art Company BH</title>
+    <style>
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #b8860b;
+            --light-color: #ecf0f1;
+            --container-width: min(1200px, 90%);
+            --transition-base: 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            background-color: #000000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: var(--container-width);
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 1rem;
+        }
+
+        .logo-img {
+            width: clamp(60px, 8vw, 80px);
+            height: auto;
+            aspect-ratio: 16/9;
+        }
+
+        .logo-text {
+            font-family: 'Libre Bodoni', serif;
+            color: #FFF;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: clamp(1rem, 2vw, 2rem);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #b8860b;
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            transition: color var(--transition-base);
+        }
+
+        .nav-links a:hover {
+            color: #FFD700;
+        }
+
+        /* Main Content */
+        .container {
+            width: var(--container-width);
+            margin: 80px auto 0;
+            padding: 2rem 1rem;
+        }
+
+        .product-header {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Carousel */
+        .product-image {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            aspect-ratio: 1/1;
+        }
+
+        .carousel-container {
+            display: flex;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            flex: 0 0 100%;
+            height: 100%;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+            z-index: 10;
+            transition: all var(--transition-base);
+        }
+
+        .carousel-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+        }
+
+        .carousel-prev { left: 0; }
+        .carousel-next { right: 0; }
+
+        /* Product Details */
+        .product-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .product-title {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            line-height: 1.2;
+            color: var(--primary-color);
+        }
+
+        .product-price {
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
+            color: green;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-description {
+            font-size: clamp(1rem, 1.2vw, 1.1rem);
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .product-specs {
+            margin-bottom: 2rem;
+        }
+
+        .product-specs h3 {
+            font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .product-specs ul {
+            list-style: none;
+        }
+
+        .product-specs ul li {
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.9rem, 1.1vw, 1rem);
+        }
+
+        /* Size Selector */
+        .size-selector {
+            margin: 1.5rem 0;
+        }
+
+        .size-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 0.8rem;
+            margin: 1rem 0;
+        }
+
+        .size-option input[type="radio"] {
+            display: none;
+        }
+
+        .size-button {
+            display: block;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            background-color: #f8f9fa;
+            font-size: clamp(0.9rem, 1.1vw, 1rem);
+            text-align: center;
+        }
+
+        .size-option input[type="radio"]:checked + .size-button {
+            border-color: var(--secondary-color);
+            background-color: rgba(184, 134, 11, 0.1);
+            font-weight: bold;
+        }
+
+        .size-button:hover {
+            background-color: rgba(184, 134, 11, 0.05);
+        }
+
+        /* Botões de Compra e PIX */
+        .button-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .buy-button, .pix-button {
+            flex: 1;
+            padding: 1.2rem;
+            text-align: center;
+            font-size: clamp(1rem, 1.2vw, 1.2rem);
+            border-radius: 5px;
+            transition: background-color var(--transition-base);
+            cursor: pointer;
+            border: none;
+            color: var(--light-color);
+        }
+
+        .buy-button {
+            background-color: var(--secondary-color);
+        }
+
+        .buy-button:hover {
+            background-color: #c0392b;
+        }
+
+        .pix-button {
+            background-color: #32CD32; /* Verde para PIX */
+        }
+
+        .pix-button:hover {
+            background-color: #228B22; /* Verde mais escuro no hover */
+        }
+
+        @media (max-width: 768px) {
+            .button-container {
+                flex-direction: column;
+            }
+        }
+
+        /* Modal de Pagamento */
+        .payment-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 2000;
+        }
+
+        .payment-content {
+            position: relative;
+            background: white;
+            margin: 5% auto;
+            padding: 2rem;
+            width: min(90%, 500px);
+            border-radius: 10px;
+            animation: modalSlide 0.3s ease;
+        }
+
+        .payment-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .whatsapp-payment-link {
+            background: #25D366;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .whatsapp-payment-link:hover {
+            opacity: 0.9;
+        }
+
+        @keyframes modalSlide {
+            from { transform: translateY(-100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Modal de PIX */
+        .pix-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 2000;
+        }
+
+        .pix-content {
+            position: relative;
+            background: white;
+            margin: 5% auto;
+            padding: 2rem;
+            width: min(90%, 500px);
+            border-radius: 10px;
+            animation: modalSlide 0.3s ease;
+        }
+
+        .pix-payment-link {
+            background: #f0f8ff;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .pix-payment-link:hover {
+            transform: scale(1.02);
+        }
+
+        .pix-payment-link h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .pix-payment-link p {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .pix-payment-link small {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            margin: 3rem 0;
+            padding: 2rem 1rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .benefit {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .benefit span {
+            font-size: 2rem;
+        }
+
+        .benefit h3 {
+            font-size: clamp(1.1rem, 1.3vw, 1.2rem);
+            margin: 0.5rem 0;
+            color: var(--primary-color);
+        }
+
+        .benefit p {
+            font-size: clamp(0.8rem, 1vw, 0.9rem);
+            color: #555;
+        }
+
+        /* Testimonials Section */
+        .custom-testimonials-section {
+            margin: 3rem 0;
+            padding: 2rem 1rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .custom-testimonials-section h2 {
+            font-size: clamp(1.5rem, 2vw, 2rem);
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .custom-testimonials-carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 2rem;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 1rem;
+        }
+
+        .custom-testimonial-card {
+            flex: 0 0 calc(100% - 2rem);
+            scroll-snap-align: start;
+            padding: 1.5rem;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform var(--transition-base);
+            margin: 0 1rem;
+        }
+
+        .custom-testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .custom-testimonial-photo {
+            width: clamp(50px, 6vw, 60px);
+            height: clamp(50px, 6vw, 60px);
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .custom-testimonial-info h3 {
+            font-size: clamp(1rem, 1.2vw, 1.2rem);
+            margin: 0;
+            color: var(--primary-color);
+        }
+
+        .custom-star-rating {
+            color: #ffb300;
+            font-size: clamp(1rem, 1.1vw, 1.1rem);
+        }
+
+        .custom-testimonial-card p {
+            font-size: clamp(0.9rem, 1.1vw, 1rem);
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Fixed Logos */
+        .fixed-logo,
+        .fixed-logo2 {
+            position: fixed;
+            bottom: 20px;
+            width: clamp(40px, 6vw, 50px);
+            height: auto;
+            aspect-ratio: 1/1;
+            z-index: 1000;
+            transition: transform var(--transition-base);
+        }
+
+        .fixed-logo {
+            right: 20px;
+        }
+
+        .fixed-logo2 {
+            right: clamp(70px, 10vw, 85px);
+        }
+
+        .fixed-logo:hover,
+        .fixed-logo2:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .product-header {
+                gap: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .product-image {
+                aspect-ratio: 4/3;
+            }
+
+            .size-options {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .custom-testimonial-card {
+                flex: 0 0 90%;
+            }
+
+            .carousel-button {
+                padding: 0.6rem;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .product-header {
+                gap: 1.5rem;
+            }
+
+            .size-options {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://pps.whatsapp.net/v/t61.24694-24/473407576_1645914472694714_376084873317419995_n.jpg?ccb=11-4&oh=01_Q5AaIWZLh6wKIhbeDENV_qYt9XBVptoKtYrua6W61Gn3uM-i&oe=67E5FE19&_nc_sid=5e03e0&_nc_cat=104" 
+                     alt="Logo da Art Company BH" 
+                     class="logo-img">
+                <span class="logo-text">Art Company BH</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="index.html#produtos">Produtos</a>
+                <a href="index.html#sobre">Sobre</a>
+                <a href="index.html#contato">Contato</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo da Página do Produto -->
+    <div class="container">
+        <!-- Cabeçalho do Produto -->
+        <div class="product-header">
+            <div class="product-image">
+                <div class="carousel-container">
+                    <div class="carousel-item">
+                        <img src="https://quadrosdecorativos.com/wp-content/uploads/2023/03/8587-RCapa.jpg" >
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://quadrosdecorativos.com/wp-content/uploads/2023/03/8587-RCapa.jpg" >
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://quadrosdecorativos.com/wp-content/uploads/2023/03/8587-RCapa.jpg" >
+                    </div>
+                </div>
+                <button class="carousel-button carousel-prev">&#10094;</button>
+                <button class="carousel-button carousel-next">&#10095;</button>
+            </div>
+
+            <div class="product-details">
+                                <h1 class="product-title">Quadro Decorativo Jesus orando 4k</h1>
+                <p class="product-price">R$ <span id="dynamic-price">24,90</span></p>
+                <p class="product-description">
+                    Este quadro decorativo em tela apresenta Jesus orando em alta resolução, perfeito para adicionar um toque de espiritualidade e modernidade ao seu espaço. Ideal para salas de estar, escritórios ou quartos.
+                </p>
+                <div class="product-specs">
+                    <h3>Especificações:</h3>
+                    <ul>
+                        <li><strong>Dimensões:</strong> <span id="spec-dimensions">20x30cm</span></li>
+                        <li><strong>Material:</strong> <span id="spec-material">Tela de alta qualidade</span></li>
+                        <li><strong>Acabamento:</strong> <span id="spec-finish">Premium</span></li>
+                        <li><strong>Peso:</strong> <span id="spec-weight">500g</span></li>
+                        <li><strong>Moldura:</strong> <span id="spec-frame">Sem moldura</span></li>
+                    </ul>
+
+                    <!-- Seletor de Tamanhos -->
+                    <div class="size-selector">
+                        <h4>Selecione o tamanho:</h4>
+                        <div class="size-options">
+                            <label class="size-option">
+                                <input type="radio" name="size" value="20x30" 
+                                    data-price="24.90" 
+                                    data-stripe-link="https://buy.stripe.com/test_dR6dUc8yv38tfh6aEE"
+                                    data-dimensions="20x30cm"
+                                    data-material="Tela Canvas 280g"
+                                    data-finish="Acabamento em verniz brilhante"
+                                    data-weight="500g"
+                                    data-frame="Sem moldura"
+                                    checked>
+                                <span class="size-button">20x30 cm</span>
+                            </label>
+                            <label class="size-option">
+                                <input type="radio" name="size" value="60x40" 
+                                    data-price="384.90" 
+                                    data-stripe-link="https://buy.stripe.com/test_00g3gZ8yv38t5fq5kl"
+                                    data-dimensions="60x40cm"
+                                    data-material="Tela Canvas 340g"
+                                    data-finish="Moldura em madeira natural"
+                                    data-weight="1500g"
+                                    data-frame="Moldura 2cm">
+                                <span class="size-button">60x40 cm</span>
+                            </label>
+                            <label class="size-option">
+                                <input type="radio" name="size" value="120x70" 
+                                    data-price="679.90" 
+                                    data-stripe-link="https://buy.stripe.com/test_4gw7w0a2z38t5fq6op"
+                                    data-dimensions="120x70cm"
+                                    data-material="Tela Premium 420g"
+                                    data-finish="Moldura em MDF pintado"
+                                    data-weight="3500g"
+                                    data-frame="Moldura 4cm">
+                                <span class="size-button">120x70 cm</span>
+                            </label>
+                            <label class="size-option">
+                                <input type="radio" name="size" value="160x100" 
+                                    data-price="779.90" 
+                                    data-stripe-link="https://buy.stripe.com/test_8wM9Ew8yv38t5fq7ss"
+                                    data-dimensions="160x100cm"
+                                    data-material="Tela Profissional 500g"
+                                    data-finish="Moldura em madeira entalhada"
+                                    data-weight="5000g"
+                                    data-frame="Moldura 6cm">
+                                <span class="size-button">160x100 cm</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botões de Compra e PIX -->
+                <div class="button-container">
+                    <button class="buy-button" id="buy-button" onclick="openPaymentModal()">Comprar Agora</button>
+                    <button class="pix-button" onclick="openPixModal()">Pagar com PIX (10% de desconto)</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Pagamento -->
+        <div class="payment-modal" id="paymentModal">
+            <div class="payment-content">
+                <h2>Finalizar Compra</h2>
+                <p>Total a pagar: R$ <span id="modal-total-price">0,00</span></p>
+                <div class="payment-options">
+                    <button class="buy-button" onclick="redirectToStripe()">Pagar</button>
+                    <button onclick="closePaymentModal()" class="calculate-button" style="margin-top: 1rem; background-color: #666;">
+                        Fechar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de PIX -->
+        <div class="payment-modal" id="pixModal">
+            <div class="payment-content">
+                <h2>Pagamento via PIX</h2>
+                <p>Total com 10% de desconto: R$ <span id="pix-total-price">0,00</span></p>
+                <div class="payment-options">
+                    <div class="pix-payment-link" id="pixLink" onclick="copyPixCode()">
+                        <h3>Chave PIX:</h3>
+                        <p>ArtCompanyBH@chavepix.com</p>
+                        <small>Clique para copiar QR Code</small>
+                    </div>
+                    <a href="#" class="whatsapp-payment-link" id="whatsappPixLink" target="_blank">
+                        Enviar Comprovante via WhatsApp
+                    </a>
+                    <button onclick="closePixModal()" class="calculate-button" style="margin-top: 1rem; background-color: #666;">
+                        Fechar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Benefícios -->
+        <div class="benefits-section">
+            <h2>Por que escolher este produto?</h2>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <span>🎨</span>
+                    <h3>Design Exclusivo</h3>
+                    <p>Arte única que transforma qualquer ambiente.</p>
+                </div>
+                <div class="benefit">
+                    <span>🚚</span>
+                    <h3>Entrega Rápida</h3>
+                    <p>Receba seu produto em até 5 dias úteis.</p>
+                </div>
+                <div class="benefit">
+                    <span>💎</span>
+                    <h3>Alta Qualidade</h3>
+                    <p>Feito com materiais duráveis e premium.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Testemunhos -->
+        <div class="custom-testimonials-section">
+            <h2>O que nossos clientes dizem</h2>
+            <div class="custom-testimonials-carousel">
+                <!-- Depoimento 1 -->
+                <div class="custom-testimonial-card">
+                    <div class="custom-testimonial-header">
+                        <img src="caminho/para/foto1.jpg" alt="Cliente 1" class="custom-testimonial-photo">
+                        <div class="custom-testimonial-info">
+                            <h3>Maria Silva</h3>
+                            <div class="custom-star-rating">
+                                ★★★★★
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Adorei o quadro! A qualidade é incrível e o atendimento foi excelente. Recomendo a todos!"</p>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="custom-testimonial-card">
+                    <div class="custom-testimonial-header">
+                        <img src="caminho/para/foto2.jpg" alt="Cliente 2" class="custom-testimonial-photo">
+                        <div class="custom-testimonial-info">
+                            <h3>João Oliveira</h3>
+                            <div class="custom-star-rating">
+                                ★★★★★
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Comprei para presentear e todos elogiaram. A entrega foi rápida e o produto chegou bem embalado."</p>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="custom-testimonial-card">
+                    <div class="custom-testimonial-header">
+                        <img src="caminho/para/foto3.jpg" alt="Cliente 3" class="custom-testimonial-photo">
+                        <div class="custom-testimonial-info">
+                            <h3>Ana Costa</h3>
+                            <div class="custom-star-rating">
+                                ★★★★★
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Ótimo custo-benefício. O quadro é lindo e chama a atenção de todos que visitam minha casa."</p>
+                </div>
+            </div>
+            <!-- Setas de Navegação -->
+            <button class="custom-carousel-prev">&#10094;</button>
+            <button class="custom-carousel-next">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Logotipo fixo na parte inferior direita -->
+    <a href="https://wa.me/5531993639544/?text=Tenho%20interesse%20em%20comprar%20um%20quadro%20decorativo" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn-icons-png.flaticon.com/512/4494/4494494.png" 
+             alt="Logo da Art Company BH" 
+             class="fixed-logo">
+    </a>
+    <!-- Logotipo fixo na parte inferior direita -->
+    <a href="https://www.instagram.com/artcompany.bh/" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" 
+             alt="Logo da Art Company BH" 
+             class="fixed-logo2">
+    </a>
+
+    <script>
+        // Script do Carrossel
+        const carouselContainer = document.querySelector('.carousel-container');
+        const items = document.querySelectorAll('.carousel-item');
+        const prevButton = document.querySelector('.carousel-prev');
+        const nextButton = document.querySelector('.carousel-next');
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+            updateCarousel();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+            updateCarousel();
+        });
+
+        // Script do Carrossel de Testemunhos
+        const customCarousel = document.querySelector('.custom-testimonials-carousel');
+        const customPrevButton = document.querySelector('.custom-carousel-prev');
+        const customNextButton = document.querySelector('.custom-carousel-next');
+        let customCurrentIndex = 0;
+
+        function updateCustomCarousel() {
+            customCarousel.scrollTo({
+                left: customCurrentIndex * customCarousel.offsetWidth,
+                behavior: 'smooth'
+            });
+        }
+
+        function nextTestimonial() {
+            if (customCurrentIndex < customCarousel.children.length - 1) {
+                customCurrentIndex++;
+            } else {
+                customCurrentIndex = 0; // Volta ao primeiro depoimento
+            }
+            updateCustomCarousel();
+        }
+
+        function prevTestimonial() {
+            if (customCurrentIndex > 0) {
+                customCurrentIndex--;
+            } else {
+                customCurrentIndex = customCarousel.children.length - 1; // Vai para o último depoimento
+            }
+            updateCustomCarousel();
+        }
+
+        customPrevButton.addEventListener('click', prevTestimonial);
+        customNextButton.addEventListener('click', nextTestimonial);
+
+        // Avança automaticamente a cada 15 segundos
+        setInterval(nextTestimonial, 5000);
+
+        // Funções para controle do modal de pagamento normal
+        function openPaymentModal() {
+            const total = parseFloat(document.getElementById('dynamic-price').textContent.replace(',', '.'));
+            document.getElementById('modal-total-price').textContent = total.toFixed(2).replace('.', ',');
+            document.getElementById('paymentModal').style.display = 'block';
+        }
+
+        function closePaymentModal() {
+            document.getElementById('paymentModal').style.display = 'none';
+        }
+
+        // Função para redirecionar para o link do Stripe com base no tamanho selecionado
+        function redirectToStripe() {
+            const selectedSize = document.querySelector('.size-option input:checked');
+            const stripeLink = selectedSize.dataset.stripeLink;
+            const redirectUrl = "https://artcompanybh.github.io/ArtCompanyBH/index.html"; // Link fixo de redirecionamento
+            window.location.href = `${stripeLink}?redirect_url=${encodeURIComponent(redirectUrl)}`;
+        }
+
+        // Funções para controle do modal de PIX
+        function openPixModal() {
+            const total = parseFloat(document.getElementById('dynamic-price').textContent.replace(',', '.'));
+            const discountedTotal = total * 0.9; // Aplica 10% de desconto
+            document.getElementById('pix-total-price').textContent = discountedTotal.toFixed(2).replace('.', ',');
+            document.getElementById('pixModal').style.display = 'block';
+            generateWhatsappLink(discountedTotal, true); // Link com desconto
+        }
+
+        function closePixModal() {
+            document.getElementById('pixModal').style.display = 'none';
+        }
+
+        // Função para copiar o código PIX
+        function copyPixCode() {
+            const pixCode = "ArtCompanyBH@chavepix.com";
+            navigator.clipboard.writeText(pixCode).then(() => {
+                alert("Chave PIX copiada: " + pixCode);
+            }).catch(() => {
+                alert("Não foi possível copiar a chave PIX.");
+            });
+        }
+
+        // Função para gerar link do WhatsApp
+        function generateWhatsappLink(total, isPix) {
+            const productTitle = encodeURIComponent(document.querySelector('.product-title').textContent);
+            const selectedSize = document.querySelector('.size-option input:checked').value;
+            const paymentMethod = isPix ? 'PIX (com 10% de desconto)' : 'outro método';
+            const message = `Olá! Gostaria de confirmar a compra do produto:
+${productTitle}
+Tamanho: ${selectedSize}
+Valor total: R$ ${total.toFixed(2).replace('.', ',')}
+Forma de pagamento: ${paymentMethod}`;
+
+            const whatsappUrl = `https://wa.me/5531993639544/?text=${encodeURIComponent(message)}`;
+            
+            if (isPix) {
+                document.getElementById('whatsappPixLink').href = whatsappUrl;
+            } else {
+                document.getElementById('whatsappLink').href = whatsappUrl;
+            }
+        }
+
+        // Fechar modais ao clicar fora
+        window.onclick = function(event) {
+            const paymentModal = document.getElementById('paymentModal');
+            const pixModal = document.getElementById('pixModal');
+            if (event.target === paymentModal) {
+                closePaymentModal();
+            }
+            if (event.target === pixModal) {
+                closePixModal();
+            }
+        }
+
+        // Script Atualizado para Atualizar Especificações
+        document.querySelectorAll('.size-option input').forEach(radio => {
+            radio.addEventListener('change', () => {
+                if(radio.checked) {
+                    // Atualizar preço
+                    document.getElementById('dynamic-price').textContent = 
+                        radio.dataset.price.replace('.', ',');
+                    
+                    // Atualizar link de compra
+                    document.getElementById('buy-button').href = radio.dataset.link;
+
+                    // Atualizar especificações
+                    const specs = [
+                        'dimensions', 'material', 'finish', 'weight', 'frame'
+                    ];
+
+                    specs.forEach(spec => {
+                        document.getElementById(`spec-${spec}`).textContent = 
+                            radio.dataset[spec];
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
