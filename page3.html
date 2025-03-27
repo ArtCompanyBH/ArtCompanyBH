@@ -1,0 +1,2621 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro Decorativo Leão Colorido 4K | Art Company BH</title>
+    <meta name="description" content="Quadro decorativo premium do Leão em alta resolução 4K. Feito com tela canvas de alta qualidade e tintas resistentes. Personalize o tamanho e moldura.">
+    
+    <!-- Schema Markup para SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Quadro Decorativo Leão Colorido 4K",
+      "image": "https://lojagiftup.com.br/image/cache/catalog/produtos/15431-550x550.webp",
+      "description": "Quadro decorativo premium do Leão em alta resolução 4K. Feito com tela canvas de alta qualidade e tintas resistentes.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Art Company BH"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://artcompanybh.github.io/ArtCompanyBH/page1.html",
+        "priceCurrency": "BRL",
+        "price": "24.90",
+        "priceValidUntil": "2025-12-31",
+        "itemCondition": "https://schema.org/NewCondition",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "47"
+      }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e67e22;
+            --accent-color: #3498db;
+            --light-color: #f9f9f9;
+            --dark-color: #2c3e50;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --error-color: #e74c3c;
+            --container-width: min(1200px, 92%);
+            --transition-base: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-lg: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+            --shadow-xl: 0 15px 25px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        }
+
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.7;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--primary-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Header Modernizado */
+        .header {
+            background-color: var(--primary-color);
+            box-shadow: var(--shadow-md);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.03);
+        }
+
+        .logo-img {
+            width: clamp(60px, 8vw, 80px);
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.2rem, 2vw, 1.8rem);
+            color: white;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: clamp(1rem, 2vw, 2rem);
+        }
+
+        .nav-links a {
+            position: relative;
+            color: white;
+            font-weight: 500;
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Menu Hamburguer */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+
+        .hamburger {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background: white;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger::before,
+        .hamburger::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger::before {
+            transform: translateY(-8px);
+        }
+
+        .hamburger::after {
+            transform: translateY(8px);
+        }
+
+        .menu-toggle.active .hamburger {
+            transform: rotate(45deg);
+            background: var(--secondary-color);
+        }
+
+        .menu-toggle.active .hamburger::before {
+            transform: rotate(90deg);
+            background: var(--secondary-color);
+        }
+
+        .menu-toggle.active .hamburger::after {
+            opacity: 0;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 70%;
+                max-width: 300px;
+                background: var(--primary-color);
+                flex-direction: column;
+                padding: 6rem 2rem;
+                transition: right 0.4s ease;
+                z-index: 999;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 1.5rem;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .nav-links a {
+                font-size: 1.1rem;
+                width: 100%;
+                padding: 0.8rem 0;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .nav-links a::after {
+                display: none;
+            }
+            
+            .logo {
+                width: 100%;
+                justify-content: center;
+                position: relative;
+            }
+            
+            .logo-img {
+                position: absolute;
+                left: 0;
+            }
+            
+            .logo-text {
+                margin-left: 50px;
+            }
+        }
+
+        /* Main Content */
+        .container {
+            width: var(--container-width);
+            margin: 100px auto 0;
+            padding: 2rem 0;
+        }
+
+
+        /* Product Header - Alterado para layout vertical */
+        .product-header {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Carousel Aprimorado */
+        .product-image-container {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: transform 0.3s ease;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .product-image-container:hover {
+            transform: translateY(-5px);
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 100%; /* Aspect ratio 1:1 */
+            overflow: hidden;
+            background: #f5f5f5;
+        }
+
+        .carousel-slides {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            flex: 0 0 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .carousel-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            cursor: zoom-in;
+            transition: transform 0.3s ease;
+        }
+
+        .carousel-item img:hover {
+            transform: scale(1.03);
+        }
+
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            gap: 0.5rem;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            background: var(--secondary-color);
+            transform: scale(1.2);
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+
+        .product-image-container:hover .carousel-button {
+            opacity: 1;
+        }
+
+        .carousel-button:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-prev {
+            left: 15px;
+        }
+
+        .carousel-next {
+            right: 15px;
+        }
+
+        /* Product Details */
+        .product-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .product-title {
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            line-height: 1.2;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .product-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        .product-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .product-price-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+            justify-content: center;
+        }
+
+        .product-price {
+            font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+            color: var(--success-color);
+            font-weight: 700;
+        }
+
+        .product-original-price {
+            font-size: 1.2rem;
+            color: #999;
+            text-decoration: line-through;
+        }
+
+        .product-discount {
+            background: var(--success-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            justify-content: center;
+        }
+
+        .stars {
+            color: var(--warning-color);
+            font-size: 1.2rem;
+        }
+
+        .rating-count {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .product-description {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .product-highlights {
+            margin-bottom: 2rem;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-icon {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            min-width: 24px;
+        }
+
+        /* Size Selector Aprimorado */
+        .size-selector {
+            margin: 2rem 0;
+        }
+
+        .size-selector h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .size-selector h3::before {
+            content: '📏';
+        }
+
+        .size-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 0.8rem;
+            margin: 1rem 0;
+        }
+
+        .size-option input[type="radio"] {
+            display: none;
+        }
+
+        .size-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem 0.5rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .size-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(230,126,34,0.1) 0%, rgba(255,255,255,0) 60%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .size-dimension {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .size-price {
+            font-size: 0.9rem;
+            color: var(--success-color);
+            font-weight: 600;
+        }
+
+        .size-option input[type="radio"]:checked + .size-button {
+            border-color: var(--secondary-color);
+            background-color: white;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .size-option input[type="radio"]:checked + .size-button::before {
+            opacity: 1;
+        }
+
+        .size-button:hover {
+            border-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-sm);
+        }
+
+/* Seletor de Acabamento - Estilo Atualizado */
+    .finish-selector {
+        margin: 2rem 0;
+    }
+
+    .finish-selector h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        justify-content: center;
+        color: var(--primary-color);
+    }
+
+    .finish-selector h3::before {
+        content: '🖼️';
+        font-size: 1.1rem;
+    }
+
+    .finish-options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0.8rem;
+        margin: 1rem 0;
+    }
+
+    .finish-option input[type="radio"] {
+        display: none;
+    }
+
+    .finish-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.2rem 0.5rem;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background-color: white;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .finish-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(230,126,34,0.1) 0%, rgba(255,255,255,0) 60%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .finish-type-container {
+        margin-bottom: 0.5rem;
+    }
+
+    .finish-type {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        display: block;
+    }
+
+    .finish-category {
+        font-size: 0.75rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-top: 0.2rem;
+        display: block;
+    }
+
+    .finish-category.incluso {
+        color: var(--success-color);
+        background: rgba(39, 174, 96, 0.1);
+        padding: 0.2rem 0.5rem;
+        border-radius: 12px;
+        display: inline-block;
+    }
+
+    .finish-category.premium {
+        color: #3498db;
+        background: rgba(52, 152, 219, 0.1);
+        padding: 0.2rem 0.5rem;
+        border-radius: 12px;
+        display: inline-block;
+    }
+
+    .finish-category.super-premium {
+        color: #9b59b6;
+        background: rgba(155, 89, 182, 0.1);
+        padding: 0.2rem 0.5rem;
+        border-radius: 12px;
+        display: inline-block;
+    }
+
+    .finish-price {
+        font-size: 0.9rem;
+        color: var(--success-color);
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .finish-option input[type="radio"]:checked + .finish-button {
+        border-color: var(--secondary-color);
+        background-color: white;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .finish-option input[type="radio"]:checked + .finish-button::before {
+        opacity: 1;
+    }
+
+    .finish-option input[type="radio"]:checked + .finish-button .finish-price {
+        color: var(--secondary-color);
+        font-weight: 700;
+    }
+
+    .finish-button:hover {
+        border-color: var(--secondary-color);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-sm);
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .finish-options {
+            grid-template-columns: 1fr;
+        }
+        
+        .finish-button {
+            padding: 1rem;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+        }
+        
+        .finish-type-container {
+            margin-bottom: 0;
+            text-align: left;
+            flex: 1;
+        }
+        
+        .finish-price {
+            margin-left: 1rem;
+            white-space: nowrap;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .finish-selector h3 {
+            font-size: 1.1rem;
+            justify-content: flex-start;
+        }
+        
+        .finish-button {
+            padding: 0.8rem;
+        }
+        
+        .finish-type {
+            font-size: 0.95rem;
+        }
+    }
+
+        /* Botões de Compra Aprimorados */
+        .button-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .buy-button, .pix-button, .wishlist-button {
+            flex: 1;
+            min-width: 200px;
+            padding: 1.2rem;
+            text-align: center;
+            font-size: 1.05rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            color: white;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .buy-button {
+            background-color: var(--secondary-color);
+        }
+
+        .buy-button:hover {
+            background-color: #d35400;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .pix-button {
+            background-color: var(--success-color);
+        }
+
+        .pix-button:hover {
+            background-color: #219653;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .wishlist-button {
+            background-color: white;
+            color: var(--primary-color);
+            border: 1px solid #ddd;
+        }
+
+        .wishlist-button:hover {
+            background-color: #f8f9fa;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--secondary-color);
+            color: var(--secondary-color);
+        }
+
+        /* Seção de Entrega */
+        .delivery-info {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .delivery-header {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+            justify-content: center;
+        }
+
+        .delivery-icon {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .delivery-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .delivery-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .delivery-item {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .delivery-item h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .delivery-item p {
+            font-size: 0.9rem;
+            color: #666;
+            padding-left: 1.5rem;
+        }
+
+        /* Tabs de Informações */
+        .product-tabs {
+            margin: 3rem 0;
+        }
+
+        .tabs-header {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 1.5rem;
+            justify-content: center;
+        }
+
+        .tab-button {
+            padding: 0.8rem 1.5rem;
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            font-weight: 600;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button.active {
+            color: var(--secondary-color);
+            border-bottom-color: var(--secondary-color);
+        }
+
+        .tab-button:hover:not(.active) {
+            color: var(--primary-color);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 1.5rem 0;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Especificações Técnicas */
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .spec-item {
+            margin-bottom: 1rem;
+        }
+
+        .spec-title {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .spec-value {
+            color: #666;
+        }
+
+        /* Seção de Vídeo */
+        .video-section {
+            margin: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        .video-container {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            max-width: 800px;
+            margin: 0 auto;
+            aspect-ratio: 16/9;
+            background: #000;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Galeria de Detalhes */
+        .detail-gallery {
+            margin: 4rem 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            padding: 1.5rem;
+        }
+
+        .gallery-caption h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .gallery-caption h3::before {
+            content: '✓';
+            color: var(--success-color);
+            font-weight: bold;
+        }
+
+        .gallery-caption p {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Seção de Benefícios */
+        .benefits-section {
+            margin: 4rem 0;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .benefit {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+
+        .benefit:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .benefit h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .benefit p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* Seção de Testemunhos */
+        .testimonials-section {
+            margin: 4rem 0;
+            position: relative;
+        }
+
+        .testimonials-carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 2rem;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding: 1rem 0;
+            scrollbar-width: none;
+        }
+
+        .testimonials-carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .testimonial-card {
+            flex: 0 0 calc(100% - 2rem);
+            scroll-snap-align: start;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+
+        @media (min-width: 768px) {
+            .testimonial-card {
+                flex: 0 0 calc(50% - 2rem);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .testimonial-card {
+                flex: 0 0 calc(33.333% - 2rem);
+            }
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-photo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--secondary-color);
+        }
+
+        .testimonial-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .testimonial-date {
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        .star-rating {
+            color: var(--warning-color);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.7;
+            font-style: italic;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .testimonial-text::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -10px;
+            font-size: 3rem;
+            color: rgba(230, 126, 34, 0.1);
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .carousel-nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .carousel-nav-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-nav-button:hover {
+            background: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+        }
+
+        /* Perguntas Frequentes */
+        .faq-section {
+            margin: 4rem 0;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-question {
+            padding: 1.2rem;
+            background: white;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #f9f9f9;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-question {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.2rem;
+            max-height: 0;
+            overflow: hidden;
+            background: white;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 1.2rem;
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* Selos de Garantia */
+        .trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 3rem 0;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .trust-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            min-width: 100px;
+        }
+
+        .badge-icon {
+            font-size: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .badge-text {
+            font-size: 0.8rem;
+            text-align: center;
+            color: #666;
+        }
+
+        /* Logos Fixos */
+        .fixed-contact {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .fixed-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .fixed-button:hover {
+            transform: scale(1.1) translateY(-5px);
+        }
+
+        .fixed-whatsapp {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .fixed-instagram {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+            color: white;
+        }
+
+        .fixed-button i {
+            font-size: 1.5rem;
+        }
+
+        .tooltip {
+            position: absolute;
+            right: 60px;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .fixed-button:hover .tooltip {
+            opacity: 1;
+            right: 70px;
+        }
+
+        /* Modal de Pagamento */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 2000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-container {
+            position: relative;
+            background: white;
+            margin: 5% auto;
+            padding: 2rem;
+            width: min(90%, 500px);
+            border-radius: 12px;
+            box-shadow: var(--shadow-xl);
+            animation: slideDown 0.4s ease;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #999;
+            transition: color 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: var(--error-color);
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .payment-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .payment-method {
+            padding: 1.2rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            }
+                .payment-method:hover {
+        border-color: var(--secondary-color);
+        background-color: #f9f9f9;
+    }
+
+    .payment-method i {
+        font-size: 1.8rem;
+        color: var(--secondary-color);
+    }
+
+    .payment-method.active {
+        border-color: var(--secondary-color);
+        background-color: rgba(230, 126, 34, 0.05);
+    }
+
+    .payment-info {
+        flex: 1;
+    }
+
+    .payment-info h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .payment-info p {
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+    .modal-button {
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1.5rem;
+        background-color: var(--secondary-color);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .modal-button:hover {
+        background-color: #d35400;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-sm);
+    }
+
+    /* Modal de PIX */
+    .pix-modal-content {
+        text-align: center;
+    }
+
+    .pix-qrcode {
+        width: 200px;
+        height: 200px;
+        margin: 1rem auto;
+        background: #f5f5f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        padding: 1rem;
+    }
+
+    .pix-code {
+        background: #f5f5f5;
+        padding: 1rem;
+        border-radius: 8px;
+        margin: 1rem 0;
+        word-break: break-all;
+        font-family: monospace;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .copy-pix {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: var(--secondary-color);
+        color: white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 0 8px 0 8px;
+        font-size: 0.8rem;
+    }
+
+    .pix-instructions {
+        text-align: left;
+        margin-top: 1.5rem;
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+    .pix-instructions ol {
+        padding-left: 1.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .pix-instructions li {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .container {
+            margin-top: 80px;
+            padding: 1rem;
+        }
+
+        .product-header {
+            gap: 1.5rem;
+        }
+
+        .button-container {
+            flex-direction: column;
+        }
+
+        .buy-button, .pix-button, .wishlist-button {
+            width: 100%;
+        }
+
+        .delivery-content {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .delivery-item {
+            min-width: 100%;
+        }
+
+        .tabs-header {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding-bottom: 5px;
+        }
+
+        .testimonial-card {
+            flex: 0 0 calc(100% - 1rem);
+        }
+
+        .modal-container {
+            margin: 10% auto;
+            padding: 1.5rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .size-options {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .benefits-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .gallery-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .fixed-button {
+            width: 45px;
+            height: 45px;
+        }
+    }
+
+    /* Animações */
+    @keyframes slideDown {
+        from { transform: translateY(-50px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+
+    .pulse-animation {
+        animation: pulse 2s infinite;
+    }
+
+    /* Classe de ajuda para ícones */
+    .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header" id="mainHeader">
+        <nav class="nav-container" aria-label="Navegação principal">
+            <a href="index.html" class="logo">
+                <img src="https://pps.whatsapp.net/v/t61.24694-24/473407576_1645914472694714_376084873317419995_n.jpg?ccb=11-4&oh=01_Q5AaIWZLh6wKIhbeDENV_qYt9XBVptoKtYrua6W61Gn3uM-i&oe=67E5FE19&_nc_sid=5e03e0&_nc_cat=104" alt="Logo da Art Company BH" class="logo-img">
+                <span class="logo-text">Art Company</span>
+            </a>
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Início</a>
+                <a href="index.html#produtos">Produtos</a>
+                <a href="index.html#sobre">Sobre</a>
+                <a href="index.html#contato">Contato</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo da Página do Produto -->
+    <div class="container">
+
+        <!-- Cabeçalho do Produto -->
+        <div class="product-header">
+            <div class="product-image-container">
+                <div class="carousel-container">
+                    <div class="carousel-slides" id="carouselSlides">
+                        <div class="carousel-item">
+                            <img src="https://lojagiftup.com.br/image/cache/catalog/produtos/15431-550x550.webp" 
+                                 alt="Quadro Leão Colorido 4K - Vista frontal" 
+                                 loading="lazy"
+                                 class="product-image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://lojagiftup.com.br/image/cache/catalog/produtos/15431-550x550.webp" 
+                                 alt="Quadro Leão Colorido 4K - Detalhe das cores" 
+                                 loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://quadrosdecorativos.com/wp-content/uploads/2023/03/8587-RCapa.jpg" 
+                                 alt="Quadro Leão Colorido 4K - Vista lateral mostrando textura" 
+                                 loading="lazy">
+                        </div>
+                    </div>
+                    <button class="carousel-button carousel-prev" aria-label="Imagem anterior">&#10094;</button>
+                    <button class="carousel-button carousel-next" aria-label="Próxima imagem">&#10095;</button>
+                </div>
+                <div class="carousel-nav" id="carouselNav"></div>
+            </div>
+
+            <div class="product-details">
+                <h1 class="product-title">Quadro Decorativo Leão Colorido 4K</h1>
+                <p class="product-subtitle">Arte exclusiva em alta resolução - Feito à mão</p>
+                
+                <div class="product-price-container">
+                    <span class="product-price" id="dynamic-price">R$ 24,90</span>
+                    <span class="product-original-price">R$ 29,90</span>
+                    <span class="product-discount" id="discount-percentage">16% OFF</span>
+                </div>
+                
+                <div class="product-rating">
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+                    <span class="rating-count">47 avaliações</span>
+                </div>
+                
+                <p class="product-description">
+                    Este quadro decorativo em tela apresenta um majestoso leão em cores vibrantes e alta resolução 4K, 
+                    perfeito para adicionar um toque de força e modernidade ao seu espaço. Ideal para salas de estar, 
+                    escritórios ou quartos, cada peça é cuidadosamente produzida com materiais premium para garantir 
+                    durabilidade e qualidade excepcional.
+                </p>
+                
+                <div class="product-highlights">
+                    <div class="highlight-item">
+                        <span class="highlight-icon">✓</span>
+                        <span>Impressão em alta resolução 4K</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">✓</span>
+                        <span>Tela canvas 100% algodão</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">✓</span>
+                        <span>Tintas resistentes à luz UV</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">✓</span>
+                        <span>Entrega rápida em todo o Brasil</span>
+                    </div>
+                </div>
+
+                <!-- Seletor de Tamanhos -->
+                <div class="size-selector">
+    <h3>Escolha o Tamanho do Quadro</h3>
+    <div class="size-options">
+        <!-- Opções de tamanho - Moldura Simples é o padrão (mais barato) -->
+        <label class="size-option">
+            <input type="radio" name="size" value="60x40" 
+                data-price="130.00" 
+                data-finish-price-moldura="0"
+                data-finish-price-borda="220.00"  // 350 - 130
+                data-finish-price-vidro="120.00"  // 250 - 130
+                data-dimensions="60x40cm"
+                data-material="Impressão Comum"
+                data-finish="Moldura Simples"
+                data-weight="800g"
+                data-frame="Moldura 2cm"
+                checked>
+            <span class="size-button">
+                <span class="size-dimension">60x40 cm</span>
+                <span class="size-price" data-base-price="130.00">R$ 130,00</span>
+            </span>
+        </label>
+        <label class="size-option">
+            <input type="radio" name="size" value="55x70" 
+                data-price="150.00"
+                data-finish-price-moldura="0"
+                data-finish-price-borda="230.00"  // 380 - 150
+                data-finish-price-vidro="149.00"   // 299 - 150
+                data-dimensions="55x70cm"
+                data-material="Impressão Comum"
+                data-finish="Moldura Simples"
+                data-weight="1000g"
+                data-frame="Moldura 2cm">
+            <span class="size-button">
+                <span class="size-dimension">55x70 cm</span>
+                <span class="size-price" data-base-price="150.00">R$ 150,00</span>
+            </span>
+        </label>
+        <label class="size-option">
+            <input type="radio" name="size" value="115x70" 
+                data-price="240.00"
+                data-finish-price-moldura="0"
+                data-finish-price-borda="310.00"  // 550 - 240
+                data-finish-price-vidro="159.00"  // 399 - 240
+                data-dimensions="115x70cm"
+                data-material="Impressão Comum"
+                data-finish="Moldura Simples"
+                data-weight="2000g"
+                data-frame="Moldura 3cm">
+            <span class="size-button">
+                <span class="size-dimension">115x70 cm</span>
+                <span class="size-price" data-base-price="240.00">R$ 240,00</span>
+            </span>
+        </label>
+        <label class="size-option">
+            <input type="radio" name="size" value="160x100" 
+                data-price="350.00"
+                data-finish-price-moldura="0"
+                data-finish-price-borda="349.00"  // 699 - 350
+                data-finish-price-vidro="400.00"   // 750 - 350
+                data-dimensions="160x100cm"
+                data-material="Impressão Comum"
+                data-finish="Moldura Simples"
+                data-weight="3000g"
+                data-frame="Moldura 4cm">
+            <span class="size-button">
+                <span class="size-dimension">160x100 cm</span>
+                <span class="size-price" data-base-price="350.00">R$ 350,00</span>
+            </span>
+        </label>
+    </div>
+</div>
+
+                <!-- Seletor de Acabamento -->
+                <div class="finish-selector">
+    <h3>Escolha o Acabamento</h3>
+    <div class="finish-options">
+        <label class="finish-option">
+            <input type="radio" name="finish" value="moldura-simples" 
+                data-price="0" 
+                data-finish-type="moldura"
+                checked>
+            <span class="finish-button">
+                <span class="finish-type">Moldura Simples</span>
+                <span class="finish-category incluso">Incluso</span>
+            </span>
+        </label>
+        <label class="finish-option">
+            <input type="radio" name="finish" value="moldura-vidro" 
+                data-price="120.00"
+                data-finish-type="vidro">
+            <span class="finish-button">
+                <span class="finish-type">Moldura com Vidro</span>
+                <span class="finish-category premium">Premium</span>
+                
+            </span>
+        </label>
+        <label class="finish-option">
+            <input type="radio" name="finish" value="borda-infinita" 
+                data-price="220.00" 
+                data-finish-type="borda">
+            <span class="finish-button">
+                <span class="finish-type">Borda Infinita (Canvas)</span>
+                <span class="finish-category super-premium">Super Premium</span>
+  
+            </span>
+        </label>
+    </div>
+</div>
+                <!-- Botões de Compra -->
+                <div class="button-container">
+                    <button class="buy-button" id="buy-button" onclick="openPaymentModal()">
+                        <i class="fas fa-credit-card"></i> Comprar Agora
+                    </button>
+                    <button class="pix-button" onclick="openPixModal()">
+                        <i class="fas fa-qrcode"></i> Pagar com PIX
+                    </button>
+                    <button class="wishlist-button" onclick="addToWishlist()">
+                        <i class="far fa-heart"></i> Favoritar
+                    </button>
+                </div>
+
+                <!-- Informações de Entrega -->
+                <div class="delivery-info">
+                    <div class="delivery-header">
+                        <span class="delivery-icon">🚚</span>
+                        <h3 class="delivery-title">Entrega Rápida e Segura</h3>
+                    </div>
+                    <div class="delivery-content">
+                        <div class="delivery-item">
+                            <h4><i class="fas fa-truck"></i> Frete Grátis</h4>
+                            <p>Para compras acima de R$ 200 em todo o Brasil</p>
+                        </div>
+                        <div class="delivery-item">
+                            <h4><i class="fas fa-clock"></i> Entrega Expressa</h4>
+                            <p>Receba em até 3 dias úteis para Belo Horizonte</p>
+                        </div>
+                        <div class="delivery-item">
+                            <h4><i class="fas fa-shield-alt"></i> Compra Segura</h4>
+                            <p>Seu pagamento está 100% protegido</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs de Informações -->
+        <div class="product-tabs">
+            <div class="tabs-header">
+                <button class="tab-button active" data-tab="description">Descrição</button>
+                <button class="tab-button" data-tab="specs">Especificações</button>
+                <button class="tab-button" data-tab="reviews">Avaliações</button>
+                <button class="tab-button" data-tab="faq">Perguntas Frequentes</button>
+            </div>
+            
+            <div class="tab-content active" id="description">
+                <h3>Sobre este produto</h3>
+                <p>O Quadro Decorativo Leão Colorido 4K é uma peça exclusiva que combina arte contemporânea com alta tecnologia de impressão. Cada detalhe foi cuidadosamente elaborado para capturar a majestade e força deste animal impressionante.</p>
+                
+                <h3>Detalhes técnicos</h3>
+                <p>Nossos quadros são produzidos com tela canvas de alta qualidade, garantindo durabilidade e fidelidade de cores. Utilizamos tintas à base de solvente que resistem à ação do tempo e da luz solar, preservando a vibração das cores por muitos anos.</p>
+                
+                <h3>Como decorar</h3>
+                <p>Este quadro é versátil e combina com diversos estilos de decoração, desde o moderno até o clássico. Sugerimos colocá-lo como ponto focal em salas de estar, home offices ou quartos, sempre em locais com boa iluminação para realçar suas cores vibrantes.</p>
+            </div>
+            
+            <div class="tab-content" id="specs">
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <div class="spec-title">Material</div>
+                        <div class="spec-value" id="spec-material">Tela Canvas 280g</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-title">Dimensões</div>
+                        <div class="spec-value" id="spec-dimensions">20x30cm</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-title">Acabamento</div>
+                        <div class="spec-value" id="spec-finish">Acabamento em verniz brilhante</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-title">Peso</div>
+                        <div class="spec-value" id="spec-weight">500g</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-title">Moldura</div>
+                        <div class="spec-value" id="spec-frame">Sem moldura</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-title">Origem</div>
+                        <div class="spec-value">Produzido no Brasil</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="reviews">
+                <div class="testimonials-section">
+                    <div class="testimonials-carousel" id="testimonialsCarousel">
+                        <!-- Depoimento 1 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Maria Silva" class="testimonial-photo">
+                                <div class="testimonial-info">
+                                    <h3>Maria Silva</h3>
+                                    <div class="testimonial-date">15/03/2023</div>
+                                </div>
+                            </div>
+                            <div class="star-rating">★★★★★</div>
+                            <div class="testimonial-text">
+                                Adorei o quadro! A qualidade é incrível e o atendimento foi excelente. As cores são ainda mais vibrantes pessoalmente do que nas fotos. Recomendo a todos que buscam um produto de qualidade para decorar seus ambientes.
+                            </div>
+                        </div>
+                        
+                        <!-- Depoimento 2 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="João Oliveira" class="testimonial-photo">
+                                <div class="testimonial-info">
+                                    <h3>João Oliveira</h3>
+                                    <div class="testimonial-date">22/02/2023</div>
+                                </div>
+                            </div>
+                            <div class="star-rating">★★★★★</div>
+                            <div class="testimonial-text">
+                                Comprei para presentear minha esposa e todos elogiaram. A entrega foi rápida e o produto chegou muito bem embalado. O acabamento é impecável e o leão parece que vai sair do quadro, tão realista que é.
+                            </div>
+                        </div>
+                        
+                        <!-- Depoimento 3 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Ana Mansur" class="testimonial-photo">
+                                <div class="testimonial-info">
+                                    <h3>Ana Mansur</h3>
+                                    <div class="testimonial-date">08/01/2023</div>
+                                </div>
+                            </div>
+                            <div class="star-rating">★★★★☆</div>
+                            <div class="testimonial-text">
+                                Ótimo custo-benefício. O quadro é lindo e chama a atenção de todos que visitam minha casa. Só não dei 5 estrelas porque a entrega demorou um pouco mais que o previsto, mas valeu a pena esperar.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-nav-buttons">
+                        <button class="carousel-nav-button" id="testimonialPrev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-nav-button" id="testimonialNext"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="faq">
+                <div class="faq-section">
+                    <div class="faq-item">
+                        <div class="faq-question">Quanto tempo dura a entrega?</div>
+                        <div class="faq-answer">
+                            <p>O prazo de entrega varia de acordo com sua localização. Para Belo Horizonte e região metropolitana, o prazo é de 2-3 dias úteis. Para outras capitais, 5-7 dias úteis. Interior e outras regiões: 7-10 dias úteis. Entregas expressas estão disponíveis por um custo adicional.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">Como é feita a instalação do quadro?</div>
+                        <div class="faq-answer">
+                            <p>Nossos quadros vêm com um sistema de suspensão já instalado na parte traseira. Você precisará apenas de um prego ou parafuso na parede. Para tamanhos maiores (acima de 60cm), recomendamos o uso de buchas e parafusos adequados para o tipo de parede.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">Qual a política de devolução?</div>
+                        <div class="faq-answer">
+                            <p>Você tem 7 dias a partir do recebimento para solicitar a devolução, desde que o produto esteja em perfeito estado, na embalagem original. O custo do frete de devolução é por conta do cliente, exceto em casos de defeito de fabricação ou erro no pedido.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">As cores podem desbotar com o tempo?</div>
+                        <div class="faq-answer">
+                            <p>Utilizamos tintas de alta qualidade com proteção UV que garantem a durabilidade das cores por muitos anos. Evite apenas a exposição direta à luz solar intensa por longos períodos para preservar ainda mais a vibração das cores.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Vídeo -->
+        <div class="video-section">
+            <h2 class="section-title">Veja Como Ficará em Seu Ambiente</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/SEU_CODIGO_DO_VIDEO" 
+                        title="Quadro Leão Colorido 4K na decoração" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Galeria de Detalhes -->
+        <div class="detail-gallery">
+            <h2 class="section-title">Detalhes que Fazem a Diferença</h2>
+            <div class="gallery-grid">
+                <!-- Item 1 -->
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/600x400/f5f5f5/555?text=Acabamento+Premium" 
+                         alt="Detalhe do acabamento do quadro" 
+                         class="gallery-image" 
+                         loading="lazy">
+                    <div class="gallery-caption">
+                        <h3>Acabamento Premium</h3>
+                        <p>Tinta de alta resistência que preserva as cores vibrantes por anos, protegida por verniz brilhante que realça os detalhes.</p>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/600x400/f5f5f5/555?text=Material+Durável" 
+                         alt="Detalhe da tela canvas" 
+                         class="gallery-image" 
+                         loading="lazy">
+                    <div class="gallery-caption">
+                        <h3>Material Durável</h3>
+                        <p>Tela canvas 100% algodão com tratamento anti-mofo e anti-umidade, garantindo durabilidade em qualquer ambiente.</p>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/600x400/f5f5f5/555?text=Montagem+Profissional" 
+                         alt="Detalhe da montagem do quadro" 
+                         class="gallery-image" 
+                         loading="lazy">
+                    <div class="gallery-caption">
+                        <h3>Montagem Profissional</h3>
+                        <p>Quadro montado com técnicas profissionais que evitam ondulações e garantem perfeita tensão da tela em todos os tamanhos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Benefícios -->
+        <div class="benefits-section">
+            <h2 class="section-title">Por Que Escolher Nossos Quadros?</h2>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <div class="benefit-icon">🎨</div>
+                    <h3>Design Exclusivo</h3>
+                    <p>Arte única criada por designers especializados, transformando qualquer ambiente com personalidade.</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">🏆</div>
+                    <h3>Qualidade Premium</h3>
+                    <p>Materiais selecionados e processos rigorosos garantem produtos que duram por muitos anos.</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">🚚</div>
+                    <h3>Entrega Rápida</h3>
+                    <p>Processo de produção ágil e parcerias com transportadoras confiáveis para entregas dentro do prazo.</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Garantia Total</h3>
+                    <p>7 dias para trocas e devoluções e garantia de 1 ano contra defeitos de fabricação.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Selos de Confiança -->
+        <div class="trust-badges">
+            <div class="trust-badge">
+                <div class="badge-icon">✓</div>
+                <div class="badge-text">Produto Original</div>
+            </div>
+            <div class="trust-badge">
+                <div class="badge-icon">🔒</div>
+                <div class="badge-text">Compra Segura</div>
+            </div>
+          
+            <div class="trust-badge">
+                <div class="badge-icon">🔄</div>
+                <div class="badge-text">7 Dias para Troca</div>
+            </div>
+            
+        </div>
+
+        <!-- Modal de Pagamento -->
+        <div class="modal-overlay" id="paymentModal">
+            <div class="modal-container">
+                <span class="modal-close" onclick="closePaymentModal()">&times;</span>
+                <h2 class="modal-title">Finalizar Compra</h2>
+                <p>Total: <strong>R$ <span id="modal-total-price">24,90</span></strong></p>
+                
+                <div class="payment-options">
+                    <div class="payment-method active" onclick="selectPaymentMethod(this, 'credit')">
+                        <i class="fas fa-credit-card"></i>
+                        <div class="payment-info">
+                            <h3>Cartão de Crédito</h3>
+                            <p>Parcelamento em até 12x sem juros</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="modal-button" onclick="redirectToStripe()">
+                    <i class="fas fa-lock"></i> Finalizar Compra com Segurança
+                </button>
+                
+                <div class="security-info">
+                    <p><small><i class="fas fa-lock"></i> Ambiente 100% seguro. Seus dados estão protegidos.</small></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de PIX -->
+        <div class="modal-overlay" id="pixModal">
+            <div class="modal-container">
+                <span class="modal-close" onclick="closePixModal()">&times;</span>
+                <div class="pix-modal-content">
+                    <h2 class="modal-title">Pagamento via PIX</h2>
+                    <p>Total com 10% de desconto: <strong>R$ <span id="pix-total-price">22,41</span></strong></p>
+                    
+                    <div class="pix-qrcode">
+                        <!-- Substitua pelo QR Code real -->
+                        <img src="https://via.placeholder.com/200x200/f5f5f5/555?text=QR+Code+PIX" 
+                             alt="QR Code para pagamento via PIX" 
+                             loading="lazy">
+                    </div>
+                    
+                    <div class="pix-code" onclick="copyPixCode()">
+                        Chave PIX: ArtCompanyBH@chavepix.com
+                        <span class="copy-pix">Copiar</span>
+                    </div>
+                    
+                    <div class="pix-instructions">
+                        <h3>Como pagar com PIX:</h3>
+                        <ol>
+                            <li>Copie a chave acima ou escaneie o QR Code e pague pelo seu banco de preferência</li>
+                            <li>Envie o comprovante pelo WhatsApp</li>
+                        </ol>
+                    </div>
+                    
+                    <a href="https://wa.me/5531993639544/?text=Comprovante%20PIX%20-%20Quadro%20Leão%20Colorido" 
+                       class="modal-button" 
+                       target="_blank">
+                        <i class="fab fa-whatsapp"></i> Enviar Comprovante
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Zoom -->
+        <div class="zoom-modal" id="zoomModal">
+            <span class="close-zoom" onclick="closeZoomModal()">&times;</span>
+            <div class="zoom-content">
+                <img id="zoomedImage" src="" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Botões Fixos de Contato -->
+    <div class="fixed-contact">
+        <a href="https://wa.me/5531993639544/?text=Tenho%20interesse%20no%20Quadro%20Leão%20Colorido" 
+           class="fixed-button fixed-whatsapp" 
+           target="_blank"
+           aria-label="Fale conosco pelo WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip">Fale pelo WhatsApp</span>
+        </a>
+        
+        <a href="https://www.instagram.com/artcompany.bh/" 
+           class="fixed-button fixed-instagram" 
+           target="_blank"
+           aria-label="Siga-nos no Instagram">
+            <i class="fab fa-instagram"></i>
+            <span class="tooltip">Siga no Instagram</span>
+        </a>
+    </div>
+
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Menu Mobile
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                const isExpanded = this.classList.contains('active');
+                this.setAttribute('aria-expanded', isExpanded);
+            });
+            
+            // Fechar menu ao clicar em um link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+        
+        // Header scroll effect
+        const header = document.getElementById('mainHeader');
+        if (header) {
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        }
+
+        // Carrossel de Imagens
+        const carouselSlides = document.getElementById('carouselSlides');
+        const carouselNav = document.getElementById('carouselNav');
+        const prevButton = document.querySelector('.carousel-prev');
+        const nextButton = document.querySelector('.carousel-next');
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        if (carouselSlides && carouselNav && prevButton && nextButton && carouselItems.length > 0) {
+            // Criar dots de navegação
+            carouselItems.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('carousel-dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                });
+                carouselNav.appendChild(dot);
+            });
+
+            const dots = document.querySelectorAll('.carousel-dot');
+
+            function goToSlide(index) {
+                currentIndex = index;
+                carouselSlides.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Atualizar dots ativos
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === currentIndex);
+                });
+            }
+
+            prevButton.addEventListener('click', () => {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselItems.length - 1;
+                goToSlide(currentIndex);
+            });
+
+            nextButton.addEventListener('click', () => {
+                currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
+                goToSlide(currentIndex);
+            });
+        }
+
+        // Zoom de Imagem
+        const zoomModal = document.getElementById('zoomModal');
+        const zoomedImage = document.getElementById('zoomedImage');
+        const productImages = document.querySelectorAll('.product-image');
+
+        if (zoomModal && zoomedImage && productImages.length > 0) {
+            productImages.forEach(img => {
+                img.addEventListener('click', function() {
+                    zoomedImage.src = this.src;
+                    zoomedImage.alt = this.alt;
+                    zoomModal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            const closeZoom = zoomModal.querySelector('.close-zoom');
+            if (closeZoom) {
+                closeZoom.addEventListener('click', closeZoomModal);
+            }
+        }
+
+        function closeZoomModal() {
+            const zoomModal = document.getElementById('zoomModal');
+            if (zoomModal) {
+                zoomModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Tabs de Informações
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        if (tabButtons.length > 0 && tabContents.length > 0) {
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    // Remover classe active de todos os botões e conteúdos
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Adicionar classe active ao botão e conteúdo clicado
+                    this.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        }
+
+        // Carrossel de Depoimentos
+        const testimonialsCarousel = document.getElementById('testimonialsCarousel');
+        const testimonialPrev = document.getElementById('testimonialPrev');
+        const testimonialNext = document.getElementById('testimonialNext');
+        const testimonialCards = document.querySelectorAll('.testimonial-card');
+        let testimonialIndex = 0;
+
+        if (testimonialsCarousel && testimonialPrev && testimonialNext && testimonialCards.length > 0) {
+            function updateTestimonialCarousel() {
+                const cardWidth = testimonialCards[0].offsetWidth + 32; // 32px é o gap
+                testimonialsCarousel.scrollTo({
+                    left: testimonialIndex * cardWidth,
+                    behavior: 'smooth'
+                });
+            }
+
+            testimonialPrev.addEventListener('click', () => {
+                if (testimonialIndex > 0) {
+                    testimonialIndex--;
+                } else {
+                    testimonialIndex = testimonialCards.length - 1;
+                }
+                updateTestimonialCarousel();
+            });
+
+            testimonialNext.addEventListener('click', () => {
+                if (testimonialIndex < testimonialCards.length - 1) {
+                    testimonialIndex++;
+                } else {
+                    testimonialIndex = 0;
+                }
+                updateTestimonialCarousel();
+            });
+        }
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        if (faqItems.length > 0) {
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', () => {
+                        item.classList.toggle('active');
+                    });
+                }
+            });
+        }
+
+        // Sistema de Seleção de Tamanho e Acabamento
+        const sizeOptions = document.querySelectorAll('.size-option input');
+        const finishOptions = document.querySelectorAll('.finish-option input');
+        
+        function updatePrices() {
+            const selectedSize = document.querySelector('.size-option input:checked');
+            const selectedFinish = document.querySelector('.finish-option input:checked');
+            
+            if (!selectedSize || !selectedFinish) return;
+            
+            // Preço base já é da moldura simples (mais barato)
+            const basePrice = parseFloat(selectedSize.dataset.price);
+            
+            // Calcular adicional do acabamento selecionado
+            let finishAdditional = 0;
+            if (selectedFinish.dataset.finishType === 'vidro') {
+                finishAdditional = parseFloat(selectedSize.dataset.finishPriceVidro);
+            } else if (selectedFinish.dataset.finishType === 'borda') {
+                finishAdditional = parseFloat(selectedSize.dataset.finishPriceBorda);
+            }
+            
+            const totalPrice = basePrice + finishAdditional;
+            
+            // Atualizar preço principal
+            const dynamicPrice = document.getElementById('dynamic-price');
+            if (dynamicPrice) dynamicPrice.textContent = totalPrice.toFixed(2).replace('.', ',');
+            
+            // Atualizar preços nos botões de tamanho (mostrando preço com acabamento atual)
+            document.querySelectorAll('.size-price').forEach(el => {
+                const sizeInput = document.querySelector(`.size-option input[value="${el.closest('.size-option').querySelector('input').value}"]`);
+                let additional = 0;
+                
+                if (selectedFinish.dataset.finishType === 'vidro') {
+                    additional = parseFloat(sizeInput.dataset.finishPriceVidro);
+                } else if (selectedFinish.dataset.finishType === 'borda') {
+                    additional = parseFloat(sizeInput.dataset.finishPriceBorda);
+                }
+                
+                const sizeTotal = parseFloat(sizeInput.dataset.price) + additional;
+                el.textContent = 'R$ ' + sizeTotal.toFixed(2).replace('.', ',');
+            });
+            
+            // Atualizar preços nos botões de acabamento
+            document.querySelectorAll('.finish-price').forEach(el => {
+                const finishInput = el.closest('.finish-option').querySelector('input');
+                let price = 0;
+                
+                if (finishInput.dataset.finishType === 'vidro') {
+                    price = parseFloat(selectedSize.dataset.finishPriceVidro);
+                } else if (finishInput.dataset.finishType === 'borda') {
+                    price = parseFloat(selectedSize.dataset.finishPriceBorda);
+                }
+                
+                el.textContent = price > 0 ? `+ R$ ${price.toFixed(2).replace('.', ',')}` : 'Incluso';
+            });
+            
+            // Atualizar especificações técnicas
+            const specs = ['dimensions', 'material', 'finish', 'weight', 'frame'];
+            specs.forEach(spec => {
+                const element = document.getElementById(`spec-${spec}`);
+                if (element) element.textContent = selectedSize.dataset[spec];
+            });
+            
+            // Material e acabamento mudam conforme seleção
+            const specMaterial = document.getElementById('spec-material');
+            const specFinish = document.getElementById('spec-finish');
+            
+            if (selectedFinish.dataset.finishType === 'borda') {
+                if (specMaterial) specMaterial.textContent = "Tela Canvas Premium";
+                if (specFinish) specFinish.textContent = "Borda Infinita";
+            } else {
+                if (specMaterial) specMaterial.textContent = selectedSize.dataset.material;
+                if (specFinish) {
+                    if (selectedFinish.dataset.finishType === 'vidro') {
+                        specFinish.textContent = "Moldura com Vidro Protetor";
+                    } else {
+                        specFinish.textContent = selectedSize.dataset.finish;
+                    }
+                }
+            }
+            
+            // Atualizar modais
+            const modalTotalPrice = document.getElementById('modal-total-price');
+            if (modalTotalPrice) modalTotalPrice.textContent = totalPrice.toFixed(2).replace('.', ',');
+            
+            const pixTotalPrice = document.getElementById('pix-total-price');
+            if (pixTotalPrice) pixTotalPrice.textContent = (totalPrice * 0.9).toFixed(2).replace('.', ',');
+        }
+        
+        if (sizeOptions.length > 0 && finishOptions.length > 0) {
+            sizeOptions.forEach(option => option.addEventListener('change', updatePrices));
+            finishOptions.forEach(option => option.addEventListener('change', updatePrices));
+        }
+
+        // Modal de Pagamento
+        function openPaymentModal() {
+            const modal = document.getElementById('paymentModal');
+            if (modal) {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closePaymentModal() {
+            const modal = document.getElementById('paymentModal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function selectPaymentMethod(element, type) {
+            document.querySelectorAll('.payment-method').forEach(method => {
+                method.classList.remove('active');
+            });
+            element.classList.add('active');
+        }
+
+        function redirectToStripe() {
+            const selectedSize = document.querySelector('.size-option input:checked');
+            if (selectedSize && selectedSize.dataset.stripeLink) {
+                const redirectUrl = window.location.href;
+                window.location.href = `${selectedSize.dataset.stripeLink}?redirect_url=${encodeURIComponent(redirectUrl)}`;
+            } else {
+                alert('Por favor, selecione um tamanho antes de prosseguir.');
+            }
+        }
+
+        // Modal de PIX
+        function openPixModal() {
+            const modal = document.getElementById('pixModal');
+            if (modal) {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closePixModal() {
+            const modal = document.getElementById('pixModal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function copyPixCode() {
+            const pixCode = "ArtCompanyBH@chavepix.com";
+            navigator.clipboard.writeText(pixCode).then(() => {
+                const copyButton = document.querySelector('.copy-pix');
+                if (copyButton) {
+                    copyButton.textContent = 'Copiado!';
+                    copyButton.style.backgroundColor = '#27ae60';
+                    setTimeout(() => {
+                        copyButton.textContent = 'Copiar';
+                        copyButton.style.backgroundColor = 'var(--secondary-color)';
+                    }, 2000);
+                }
+            }).catch(() => {
+                alert("Não foi possível copiar a chave PIX.");
+            });
+        }
+
+        // Wishlist
+        function addToWishlist() {
+            const button = document.querySelector('.wishlist-button');
+            if (button) {
+                button.innerHTML = '<i class="fas fa-heart"></i> Adicionado aos Favoritos';
+                button.style.backgroundColor = '#ffecec';
+                button.style.color = '#e74c3c';
+                button.style.borderColor = '#e74c3c';
+                
+                // Simular salvamento (em um site real, seria uma chamada AJAX)
+                setTimeout(() => {
+                    button.innerHTML = '<i class="far fa-heart"></i> Favoritar';
+                    button.style.backgroundColor = 'white';
+                    button.style.color = 'var(--primary-color)';
+                    button.style.borderColor = '#ddd';
+                }, 2000);
+            }
+        }
+
+        // Vincular eventos de clique aos botões
+        const buyButton = document.getElementById('buy-button');
+        if (buyButton) {
+            buyButton.addEventListener('click', openPaymentModal);
+        }
+
+        const pixButton = document.querySelector('.pix-button');
+        if (pixButton) {
+            pixButton.addEventListener('click', openPixModal);
+        }
+
+        const wishlistButton = document.querySelector('.wishlist-button');
+        if (wishlistButton) {
+            wishlistButton.addEventListener('click', addToWishlist);
+        }
+
+        // Fechar modais ao clicar no botão de fechar
+        document.querySelectorAll('.modal-close').forEach(closeBtn => {
+            closeBtn.addEventListener('click', function() {
+                const modal = this.closest('.modal-overlay');
+                if (modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+        
+        // Fechar modais ao clicar fora do conteúdo
+        document.querySelectorAll('.modal-overlay').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+        
+        // Prevenir que o clique dentro do modal feche-o
+        document.querySelectorAll('.modal-container').forEach(container => {
+            container.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
+
+        // Inicializar preços
+        updatePrices();
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Art Company BH - Quadros decorativos exclusivos para ambientes residenciais e corporativos em Belo Horizonte">
+    <meta property="og:title" content="Art Company BH | Quadros Exclusivos">
+    <meta property="og:image" content="https://acdn-us.mitiendanube.com/stores/860/024/products/leaonesortea1-3e5ced57448e04f64916508394602939-1024-1024.jpg">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Great+Vibes&family=Mr+Dafoe&family=Rochester&family=Homemade+Apple&display=swap" rel="stylesheet">
+    
+    <title>Art Company BH | Quadros Exclusivos</title>
+    <style>
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #b8860b;
+            --light-color: #ecf0f1;
+            --spacing-unit: 1rem;
+            --transition-base: 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        /* Header melhorado */
+        .header {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 80px;
+            height: 50px;
+            margin-right: 50px;
+        }
+
+        .logo-text {
+            font-family: 'Libre Bodoni', serif;
+            font-size: 1.5rem;
+            color: #FFF;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color var(--transition-base);
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: #FFD700;
+            outline: none;
+        }
+
+        /* Menu Hamburguer Corrigido */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+
+        .hamburger {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background: var(--secondary-color);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .hamburger::before,
+        .hamburger::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .hamburger::before {
+            transform: translateY(-6px);
+        }
+
+        .hamburger::after {
+            transform: translateY(6px);
+        }
+
+        /* Quando o menu está ativo */
+        .menu-toggle.active .hamburger {
+            transform: rotate(45deg);
+        }
+
+        .menu-toggle.active .hamburger::before {
+            transform: rotate(90deg) translateX(0);
+        }
+
+        .menu-toggle.active .hamburger::after {
+            opacity: 0;
+        }
+
+        @media (max-width: 768px) {
+        .menu-toggle {
+        display: block;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        background: var(--primary-color);
+        flex-direction: column;
+        padding: 6rem 2rem;
+        transition: right 0.3s ease;
+        z-index: 999;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links a {
+        font-size: 1.2rem;
+        display: block;
+        padding: 0.5rem 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Ajuste específico para o texto da logo */
+    .logo {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .logo-text {
+        font-family: 'Libre Bodoni', serif;
+        font-size: 1.0rem;
+        color: #FFF;
+        letter-spacing: 1px;
+        text-align: center;
+        flex: 1;
+        margin-left: -50px; /* Ajuste conforme a largura da sua imagem */
+    }
+}
+        
+        
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://acdn-us.mitiendanube.com/stores/860/024/products/leaonesortea1-3e5ced57448e04f64916508394602939-1024-1024.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--light-color);
+            margin-top: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--secondary-color);
+            color: var(--light-color);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color var(--transition-base);
+        }
+
+        .cta-button:hover,
+        .cta-button:focus {
+            background-color: #c0392b;
+            outline: 2px solid rgba(184, 134, 11, 0.5);
+        }
+
+        /* Seção de Produtos com Filtros */
+        .products-section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-filters {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--secondary-color);
+            border-radius: 20px;
+            background: transparent;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: all var(--transition-base);
+        }
+
+        .filter-btn.active {
+            background: var(--secondary-color);
+            color: var(--light-color);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform var(--transition-base), box-shadow var(--transition-base);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-price {
+            color: green;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        /* Seção de Contato */
+        .contact-section {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .whatsapp-link {
+            display: inline-block;
+            transition: transform var(--transition-base);
+        }
+
+        .whatsapp-link:hover {
+            transform: scale(1.1);
+        }
+
+        /* Seção Sobre */
+        .about-section {
+            position: relative;
+            padding: 5rem 2rem;
+            background-image: url('https://via.placeholder.com/1920x600');
+            background-size: cover;
+            background-position: center;
+            color: var(--light-color);
+            text-align: center;
+        }
+
+        .about-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .about-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Footer Aprimorado */
+        footer {
+            background-color: #000000;
+            color: var(--light-color);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+            text-align: left;
+        }
+
+        .footer-section h4 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: var(--light-color);
+            text-decoration: none;
+            transition: color var(--transition-base);
+        }
+
+        .footer-section a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Logotipos Fixos */
+        .fixed-logo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            z-index: 1000;
+            transition: transform var(--transition-base);
+        }
+
+        .fixed-logo2 {
+            position: fixed;
+            bottom: 20px;
+            right: 85px;
+            width: 50px;
+            height: 50px;
+            z-index: 1000;
+            transition: transform var(--transition-base);
+        }
+
+        .fixed-logo:hover,
+        .fixed-logo2:hover {
+            transform: scale(1.1);
+        }
+
+        /* Sistema de Busca - NOVO */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 0.8rem 1.2rem;
+            border: 2px solid var(--secondary-color);
+            border-radius: 30px;
+            font-size: 1rem;
+            outline: none;
+            transition: box-shadow var(--transition-base);
+        }
+
+        .search-input:focus {
+            box-shadow: 0 0 5px rgba(184, 134, 11, 0.5);
+        }
+
+        .search-input::placeholder {
+            color: #888;
+        }
+
+        .search-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 0.8rem 1.5rem;
+            margin-left: -50px;
+            cursor: pointer;
+            transition: background-color var(--transition-base);
+        }
+
+        .search-btn:hover {
+            background-color: #996c0b;
+        }
+
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 2rem;
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            display: none;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .product-filters {
+                gap: 0.5rem;
+            }
+
+            .filter-btn {
+                font-size: 0.9rem;
+                padding: 0.4rem 0.8rem;
+            }
+            
+            .hero {
+                margin-top: 50px;
+            }
+            
+            .search-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .search-input {
+                margin-bottom: 1rem;
+            }
+            
+            .search-btn {
+                margin-left: 0;
+                width: 100%;
+                max-width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container" aria-label="Navegação principal">
+            <a href="#" class="logo">
+                <img src="https://pps.whatsapp.net/v/t61.24694-24/473407576_1645914472694714_376084873317419995_n.jpg?ccb=11-4&oh=01_Q5AaIWZLh6wKIhbeDENV_qYt9XBVptoKtYrua6W61Gn3uM-i&oe=67E5FE19&_nc_sid=5e03e0&_nc_cat=104" 
+                     alt="Logo da Art Company BH" 
+                     class="logo-img">
+                <span class="logo-text">Art Company</span>
+            </a>
+            
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            
+            <div class="nav-links">
+                <a href="#produtos">Produtos</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-label="Apresentação principal">
+            <div class="hero-content">
+                <h1>Transforme Seus Ambientes com Arte</h1>
+                <p>Quadros decorativos exclusivos para sua casa ou escritório</p>
+                <a href="#produtos" class="cta-button">Ver Catálogo Digital</a>
+            </div>
+        </section>
+
+        <section id="produtos" class="products-section">
+            <h2 class="section-title">Nossas Coleções</h2>
+            
+            <!-- Sistema de Busca - NOVO -->
+            <div class="search-container">
+                <input type="text" id="search-input" class="search-input" placeholder="Buscar quadros por nome..." aria-label="Buscar quadros">
+                <button id="clear-search" class="search-btn" style="display: none;">Limpar</button>
+            </div>
+            
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="animais">Animais</button>
+                <button class="filter-btn" data-filter="religiosos">Religiosos</button>
+                <button class="filter-btn" data-filter="futebol">Futebol</button>
+                <button class="filter-btn" data-filter="diversos">Diversos</button>
+            </div>
+
+            <div class="products-grid">
+                <!-- Produtos -->
+                <div class="product-card" data-filter="animais">
+                   <a href="page1.html">
+                    <img src="https://lojagiftup.com.br/image/cache/catalog/produtos/15431-550x550.webp" 
+                         alt="Quadro Moderno" 
+                         class="product-image"
+                         loading="lazy">
+                    <div class="product-info">
+                        <h3>Quadro Decorativo Leão Colorido 4K</h3>
+                    </a>
+                    <p>Quadro em tela com acabamento premium</p>
+                    <p class="product-price"><br>A partir de:</br>R$ 24,90</p>
+                </div>
+                </div>
+
+                <!-- Demais produtos... -->
+                <div class="product-card" data-filter="religiosos">
+                   <a href="page2.html">
+                    <img src="https://quadrosdecorativos.com/wp-content/uploads/2023/03/8587-RCapa.jpg" 
+                         alt="Quadro Moderno" 
+                         class="product-image"
+                         loading="lazy">
+                    <div class="product-info">
+                        <h3>Quadro Decorativo Jesus orando 4K</h3>
+                    </a>
+                    <p>Quadro em tela com acabamento premium</p>
+                    <p class="product-price"><br>A partir de:</br>R$ 24,90</p>
+                </div>
+                </div>
+                 <!-- Demais produtos... -->
+                 <div class="product-card" data-filter="religiosos">
+                   <a href="page3.html">
+                    <img src="https://acdn-us.mitiendanube.com/stores/001/894/418/products/vd1-64-b50f072cc8de05ba7417298835914939-640-0.jpg" 
+                         alt="Quadro Moderno" 
+                         class="product-image"
+                         loading="lazy">
+                    <div class="product-info">
+                        <h3>Quadro Decorativo Jesus 4K</h3>
+                    </a>
+                    <p>Quadro em tela com acabamento premium</p>
+                    <p class="product-price"><br>A partir de:</br>R$ 24,90</p>
+                </div>
+                </div>
+                
+                <!-- Mensagem de nenhum resultado encontrado -->
+                <div id="no-results" class="no-results">
+                    <p>Nenhum quadro encontrado com esse nome. Tente uma busca diferente!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact-section">
+            <div class="whats-container">
+                <a href="https://wa.me/5531993639544/?text=Tenho%20interesse%20em%20comprar%20um%20quadro%20decorativo" 
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="whatsapp-link"
+                   aria-label="Abrir conversa no WhatsApp">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4494/4494494.png" 
+                         alt="Ícone do WhatsApp para contato"
+                         class="whatsapp-icon"
+                         width="80"
+                         height="80"
+                         loading="lazy">
+                </a>
+                <div class="contact-instruction">
+                    <h3>Clique no ícone acima e fale com nossa equipe<br>pelo WhatsApp!</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="about-section">
+            <div class="about-overlay"></div>
+            <div class="about-content">
+                <h2 class="about-title">Sobre</h2>
+                <p class="about-text">
+                    A Art Company BH é especializada em quadros decorativos de alta qualidade, trazendo arte e 
+                    sofisticação para o seu espaço. Com anos de experiência no mercado, nossa equipe está pronta para 
+                    transformar seus ambientes com peças exclusivas e personalizadas.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer aria-label="Informações de rodapé">
+        <div class="footer-grid">
+            
+            <div class="footer-section">
+                <h4>Atendimento</h4>
+                <p>Horário: Seg-Sex 9h-18h</p>
+                <p>Email: contato@artcompanybh.com.br</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            © <span id="current-year"></span> Art Company BH - Todos os direitos reservados
+        </div>
+    </footer>
+
+    <!-- Logotipos Fixos -->
+    <a href="https://wa.me/5531993639544/?text=Tenho%20interesse%20em%20comprar%20um%20quadro%20decorativo" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Contato via WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/4494/4494494.png" 
+             alt="WhatsApp" 
+             class="fixed-logo">
+    </a>
+    
+    <a href="https://www.instagram.com/artcompany.bh/" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Perfil no Instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" 
+             alt="Instagram" 
+             class="fixed-logo2">
+    </a>
+
+    <script>
+        // Menu Mobile Corrigido
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            menuToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                
+                // Atualizar aria-expanded
+                const isExpanded = this.classList.contains('active');
+                this.setAttribute('aria-expanded', isExpanded);
+            });
+            
+            // Fechar menu ao clicar em um link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+            
+            // Fechar menu ao clicar fora
+            document.addEventListener('click', function(event) {
+                const isMenuOpen = navLinks.classList.contains('active');
+                const isClickInsideMenu = navLinks.contains(event.target);
+                const isClickOnToggle = menuToggle.contains(event.target);
+                
+                if (isMenuOpen && !isClickInsideMenu && !isClickOnToggle) {
+                    menuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        // Filtragem de Produtos
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.filter-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.dataset.filter;
+                    document.querySelectorAll('.product-card').forEach(card => {
+                        card.style.display = (filter === 'all' || card.dataset.filter === filter) 
+                            ? 'block' 
+                            : 'none';
+                    });
+                    
+                    document.querySelectorAll('.filter-btn').forEach(btn => 
+                                           btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Resetar a busca quando filtrar por categoria
+                    document.getElementById('search-input').value = '';
+                    document.getElementById('clear-search').style.display = 'none';
+                    document.getElementById('no-results').style.display = 'none';
+                });
+            });
+            
+            // Sistema de Busca - NOVO
+            const searchInput = document.getElementById('search-input');
+            const clearButton = document.getElementById('clear-search');
+            const noResults = document.getElementById('no-results');
+            const productCards = document.querySelectorAll('.product-card');
+            
+            // Função para realizar a busca
+            function performSearch() {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                let resultsFound = false;
+                
+                // Se o campo de busca estiver vazio, mostrar todos os produtos da categoria ativa
+                if (searchTerm === '') {
+                    const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
+                    
+                    productCards.forEach(card => {
+                        if (activeFilter === 'all' || card.dataset.filter === activeFilter) {
+                            card.style.display = 'block';
+                            resultsFound = true;
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                    
+                    clearButton.style.display = 'none';
+                    noResults.style.display = 'none';
+                } else {
+                    clearButton.style.display = 'block';
+                    
+                    // Resetar filtros de categoria quando buscar
+                    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                    document.querySelector('[data-filter="all"]').classList.add('active');
+                    
+                    // Filtrar produtos pelo termo de busca no título
+                    productCards.forEach(card => {
+                        const productTitle = card.querySelector('h3').textContent.toLowerCase();
+                        
+                        if (productTitle.includes(searchTerm)) {
+                            card.style.display = 'block';
+                            resultsFound = true;
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                    
+                    // Mostrar mensagem de nenhum resultado
+                    noResults.style.display = resultsFound ? 'none' : 'block';
+                }
+            }
+            
+            // Evento de busca enquanto digita
+            searchInput.addEventListener('input', performSearch);
+            
+            // Evento para o botão limpar
+            clearButton.addEventListener('click', function() {
+                searchInput.value = '';
+                clearButton.style.display = 'none';
+                performSearch();
+                searchInput.focus();
+            });
+            
+            // Evitar que o form submeta e recarregue a página
+            searchInput.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    performSearch();
+                }
+            });
+        });
+
+        // Atualizar ano automaticamente
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Animação ao scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            });
+
+            document.querySelectorAll('.product-card').forEach(card => {
+                animateOnScroll.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>                    <div class="pix-payment-link" id="pixLink" onclick="copyPixCode()">
+
