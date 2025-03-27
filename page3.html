@@ -1739,122 +1739,133 @@
 
                 <!-- Seletor de Tamanhos -->
                 <div class="size-selector">
-    <h3>Escolha o Tamanho do Quadro</h3>
-    <div class="size-options">
-        <!-- Opções de tamanho - Moldura Simples é o padrão (mais barato) -->
-        <label class="size-option">
-            <input type="radio" name="size" value="60x40" 
-                data-price="130.00" 
-                data-finish-price-moldura="0"
-                data-finish-price-borda="220.00"  // 350 - 130
-                data-finish-price-vidro="120.00"  // 250 - 130
-                data-dimensions="60x40cm"
-                data-material="Impressão Comum"
-                data-finish="Moldura Simples"
-                data-weight="800g"
-                data-frame="Moldura 2cm"
-                checked>
-            <span class="size-button">
-                <span class="size-dimension">60x40 cm</span>
-                <span class="size-price" data-base-price="130.00">R$ 130,00</span>
-            </span>
-        </label>
-        <label class="size-option">
-            <input type="radio" name="size" value="55x70" 
-                data-price="150.00"
-                data-finish-price-moldura="0"
-                data-finish-price-borda="230.00"  // 380 - 150
-                data-finish-price-vidro="149.00"   // 299 - 150
-                data-dimensions="55x70cm"
-                data-material="Impressão Comum"
-                data-finish="Moldura Simples"
-                data-weight="1000g"
-                data-frame="Moldura 2cm">
-            <span class="size-button">
-                <span class="size-dimension">55x70 cm</span>
-                <span class="size-price" data-base-price="150.00">R$ 150,00</span>
-            </span>
-        </label>
-        <label class="size-option">
-            <input type="radio" name="size" value="115x70" 
-                data-price="240.00"
-                data-finish-price-moldura="0"
-                data-finish-price-borda="310.00"  // 550 - 240
-                data-finish-price-vidro="159.00"  // 399 - 240
-                data-dimensions="115x70cm"
-                data-material="Impressão Comum"
-                data-finish="Moldura Simples"
-                data-weight="2000g"
-                data-frame="Moldura 3cm">
-            <span class="size-button">
-                <span class="size-dimension">115x70 cm</span>
-                <span class="size-price" data-base-price="240.00">R$ 240,00</span>
-            </span>
-        </label>
-        <label class="size-option">
-            <input type="radio" name="size" value="160x100" 
-                data-price="350.00"
-                data-finish-price-moldura="0"
-                data-finish-price-borda="349.00"  // 699 - 350
-                data-finish-price-vidro="400.00"   // 750 - 350
-                data-dimensions="160x100cm"
-                data-material="Impressão Comum"
-                data-finish="Moldura Simples"
-                data-weight="3000g"
-                data-frame="Moldura 4cm">
-            <span class="size-button">
-                <span class="size-dimension">160x100 cm</span>
-                <span class="size-price" data-base-price="350.00">R$ 350,00</span>
-            </span>
-        </label>
-    </div>
-</div>
+                    <h3>Escolha o Tamanho do Quadro</h3>
+                    <div class="size-options">
+                        <!-- Opções de tamanho - Moldura Simples é o padrão (mais barato) -->
+                        <label class="size-option">
+                            <input type="radio" name="size" value="60x40" 
+                                data-price="130.00" 
+                                data-finish-price-moldura="0"
+                                data-finish-price-borda="220.00"
+                                data-finish-price-vidro="120.00"
+                                data-dimensions="60x40cm"
+                                data-material="Impressão Comum"
+                                data-finish="Moldura Simples"
+                                data-weight="800g"
+                                data-frame="Moldura 2cm"
+                                data-stripe-moldura="https://buy.stripe.com/test_14k03m4ifcJ3glaaEF"
+                                data-stripe-vidro="https://buy.stripe.com/test_14k03m4ifcJ3glaaEF"
+                                data-stripe-borda="https://buy.stripe.com/test_borda_60x40"
+                                checked>
+                            <span class="size-button">
+                                <span class="size-dimension">60x40 cm</span>
+                                <span class="size-price" data-base-price="130.00">R$ 130,00</span>
+                            </span>
+                        </label>
+                        <label class="size-option">
+                            <input type="radio" name="size" value="55x70" 
+                                data-price="150.00"
+                                data-finish-price-moldura="0"
+                                data-finish-price-borda="230.00"
+                                data-finish-price-vidro="149.00"
+                                data-dimensions="55x70cm"
+                                data-material="Impressão Comum"
+                                data-finish="Moldura Simples"
+                                data-weight="1000g"
+                                data-frame="Moldura 2cm"
+                                data-stripe-moldura="https://buy.stripe.com/test_14k03m4ifcJ3glaaEF"
+                                data-stripe-vidro="https://buy.stripe.com/test_vidro_55x70"
+                                data-stripe-borda="https://buy.stripe.com/test_borda_55x70">
+                            <span class="size-button">
+                                <span class="size-dimension">55x70 cm</span>
+                                <span class="size-price" data-base-price="150.00">R$ 150,00</span>
+                            </span>
+                        </label>
+                        <label class="size-option">
+                            <input type="radio" name="size" value="115x70" 
+                                data-price="240.00"
+                                data-finish-price-moldura="0"
+                                data-finish-price-borda="310.00"
+                                data-finish-price-vidro="159.00"
+                                data-dimensions="115x70cm"
+                                data-material="Impressão Comum"
+                                data-finish="Moldura Simples"
+                                data-weight="2000g"
+                                data-frame="Moldura 3cm"
+                                data-stripe-moldura="https://buy.stripe.com/test_moldura_115x70"
+                                data-stripe-vidro="https://buy.stripe.com/test_vidro_115x70"
+                                data-stripe-borda="https://buy.stripe.com/test_borda_115x70">
+                            <span class="size-button">
+                                <span class="size-dimension">115x70 cm</span>
+                                <span class="size-price" data-base-price="240.00">R$ 240,00</span>
+                            </span>
+                        </label>
+                        <label class="size-option">
+                            <input type="radio" name="size" value="160x100" 
+                                data-price="350.00"
+                                data-finish-price-moldura="0"
+                                data-finish-price-borda="349.00"
+                                data-finish-price-vidro="400.00"
+                                data-dimensions="160x100cm"
+                                data-material="Impressão Comum"
+                                data-finish="Moldura Simples"
+                                data-weight="3000g"
+                                data-frame="Moldura 4cm"
+                                data-stripe-moldura="https://buy.stripe.com/test_moldura_160x100"
+                                data-stripe-vidro="https://buy.stripe.com/test_vidro_160x100"
+                                data-stripe-borda="https://buy.stripe.com/test_borda_160x100">
+                            <span class="size-button">
+                                <span class="size-dimension">160x100 cm</span>
+                                <span class="size-price" data-base-price="350.00">R$ 350,00</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
 
                 <!-- Seletor de Acabamento -->
                 <div class="finish-selector">
-    <h3>Escolha o Acabamento</h3>
-    <div class="finish-options">
-        <label class="finish-option">
-            <input type="radio" name="finish" value="moldura-simples" 
-                data-price="0" 
-                data-finish-type="moldura"
-                checked>
-            <span class="finish-button">
-                <span class="finish-type">Moldura Simples</span>
-                <span class="finish-category incluso">Incluso</span>
-            </span>
-        </label>
-        <label class="finish-option">
-            <input type="radio" name="finish" value="moldura-vidro" 
-                data-price="120.00"
-                data-finish-type="vidro">
-            <span class="finish-button">
-                <span class="finish-type">Moldura com Vidro</span>
-                <span class="finish-category premium">Premium</span>
+                    <h3>Escolha o Acabamento</h3>
+                    <div class="finish-options">
+                        <label class="finish-option">
+                            <input type="radio" name="finish" value="moldura-simples" 
+                                data-price="0" 
+                                data-finish-type="moldura"
+                                checked>
+                            <span class="finish-button">
+                                <span class="finish-type">Moldura Simples</span>
+                                <span class="finish-category incluso">Incluso</span>
+                            </span>
+                        </label>
+                        <label class="finish-option">
+                            <input type="radio" name="finish" value="moldura-vidro" 
+                                data-price="120.00"
+                                data-finish-type="vidro">
+                            <span class="finish-button">
+                                <span class="finish-type">Moldura com Vidro</span>
+                                <span class="finish-category premium">Premium</span>
+                            </span>
+                        </label>
+                        <label class="finish-option">
+                            <input type="radio" name="finish" value="borda-infinita" 
+                                data-price="220.00" 
+                                data-finish-type="borda">
+                            <span class="finish-button">
+                                <span class="finish-type">Borda Infinita (Canvas)</span>
+                                <span class="finish-category super-premium">Super Premium</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
                 
-            </span>
-        </label>
-        <label class="finish-option">
-            <input type="radio" name="finish" value="borda-infinita" 
-                data-price="220.00" 
-                data-finish-type="borda">
-            <span class="finish-button">
-                <span class="finish-type">Borda Infinita (Canvas)</span>
-                <span class="finish-category super-premium">Super Premium</span>
-  
-            </span>
-        </label>
-    </div>
-</div>
                 <!-- Botões de Compra -->
                 <div class="button-container">
-                    <button class="buy-button" id="buy-button" onclick="openPaymentModal()">
+                    <button class="buy-button" id="buy-button">
                         <i class="fas fa-credit-card"></i> Comprar Agora
                     </button>
-                    <button class="pix-button" onclick="openPixModal()">
+                    <button class="pix-button">
                         <i class="fas fa-qrcode"></i> Pagar com PIX
                     </button>
-                    <button class="wishlist-button" onclick="addToWishlist()">
+                    <button class="wishlist-button">
                         <i class="far fa-heart"></i> Favoritar
                     </button>
                 </div>
@@ -2056,7 +2067,7 @@
                          loading="lazy">
                     <div class="gallery-caption">
                         <h3>Material Durável</h3>
-                        <p>Tela canvas 100% algodão com tratamento anti-mofo e anti-umidade, garantindo durabilidade em qualquer ambiente.</p>
+                        <p>Tela canvas 100% algodão com tratamento anti-***** e anti-umidade, garantindo durabilidade em qualquer ambiente.</p>
                     </div>
                 </div>
                 
@@ -2111,18 +2122,16 @@
                 <div class="badge-icon">🔒</div>
                 <div class="badge-text">Compra Segura</div>
             </div>
-          
             <div class="trust-badge">
                 <div class="badge-icon">🔄</div>
                 <div class="badge-text">7 Dias para Troca</div>
             </div>
-            
         </div>
 
         <!-- Modal de Pagamento -->
         <div class="modal-overlay" id="paymentModal">
             <div class="modal-container">
-                <span class="modal-close" onclick="closePaymentModal()">&times;</span>
+                <span class="modal-close">&times;</span>
                 <h2 class="modal-title">Finalizar Compra</h2>
                 <p>Total: <strong>R$ <span id="modal-total-price">24,90</span></strong></p>
                 
@@ -2136,7 +2145,7 @@
                     </div>
                 </div>
                 
-                <button class="modal-button" onclick="redirectToStripe()">
+                <button class="modal-button" id="finalize-purchase">
                     <i class="fas fa-lock"></i> Finalizar Compra com Segurança
                 </button>
                 
@@ -2149,19 +2158,18 @@
         <!-- Modal de PIX -->
         <div class="modal-overlay" id="pixModal">
             <div class="modal-container">
-                <span class="modal-close" onclick="closePixModal()">&times;</span>
+                <span class="modal-close">&times;</span>
                 <div class="pix-modal-content">
                     <h2 class="modal-title">Pagamento via PIX</h2>
                     <p>Total com 10% de desconto: <strong>R$ <span id="pix-total-price">22,41</span></strong></p>
                     
                     <div class="pix-qrcode">
-                        <!-- Substitua pelo QR Code real -->
                         <img src="https://via.placeholder.com/200x200/f5f5f5/555?text=QR+Code+PIX" 
                              alt="QR Code para pagamento via PIX" 
                              loading="lazy">
                     </div>
                     
-                    <div class="pix-code" onclick="copyPixCode()">
+                    <div class="pix-code" id="pix-code">
                         Chave PIX: ArtCompanyBH@chavepix.com
                         <span class="copy-pix">Copiar</span>
                     </div>
@@ -2185,7 +2193,7 @@
 
         <!-- Modal de Zoom -->
         <div class="zoom-modal" id="zoomModal">
-            <span class="close-zoom" onclick="closeZoomModal()">&times;</span>
+            <span class="close-zoom">&times;</span>
             <div class="zoom-content">
                 <img id="zoomedImage" src="" alt="">
             </div>
@@ -2211,7 +2219,7 @@
         </a>
     </div>
 
-   <script>
+    <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Menu Mobile
         const menuToggle = document.querySelector('.menu-toggle');
@@ -2388,9 +2396,12 @@
             });
         }
 
+
+
         // Sistema de Seleção de Tamanho e Acabamento
         const sizeOptions = document.querySelectorAll('.size-option input');
         const finishOptions = document.querySelectorAll('.finish-option input');
+        
         
         function updatePrices() {
             const selectedSize = document.querySelector('.size-option input:checked');
@@ -2508,11 +2519,35 @@
 
         function redirectToStripe() {
             const selectedSize = document.querySelector('.size-option input:checked');
-            if (selectedSize && selectedSize.dataset.stripeLink) {
-                const redirectUrl = window.location.href;
-                window.location.href = `${selectedSize.dataset.stripeLink}?redirect_url=${encodeURIComponent(redirectUrl)}`;
+            const selectedFinish = document.querySelector('.finish-option input:checked');
+
+            if (!selectedSize || !selectedFinish) {
+                alert("Por favor, selecione um tamanho e acabamento antes de prosseguir.");
+                return;
+            }
+
+            const finishType = selectedFinish.dataset.finishType; // "moldura", "vidro" ou "borda"
+            
+            // Mapeia os tipos de acabamento para os atributos data correspondentes
+            const stripeAttribute = `data-stripe-${finishType}`;
+            const stripeLink = selectedSize.getAttribute(stripeAttribute);
+
+            if (!stripeLink) {
+                console.error("Link Stripe não encontrado para:", {
+                    size: selectedSize.value,
+                    finish: finishType,
+                    availableData: selectedSize.dataset
+                });
+                alert("Configuração de pagamento não disponível para esta combinação. Por favor, entre em contato conosco.");
+                return;
+            }
+
+            // Verifica se o link começa com http para evitar XSS
+            if (stripeLink.startsWith('http')) {
+                window.location.href = stripeLink;
             } else {
-                alert('Por favor, selecione um tamanho antes de prosseguir.');
+                console.error("Link Stripe inválido:", stripeLink);
+                alert("Erro no processamento do pagamento. Por favor, tente novamente ou entre em contato.");
             }
         }
 
@@ -2585,6 +2620,11 @@
             wishlistButton.addEventListener('click', addToWishlist);
         }
 
+        const finalizeButton = document.getElementById('finalize-purchase');
+        if (finalizeButton) {
+            finalizeButton.addEventListener('click', redirectToStripe);
+        }
+
         // Fechar modais ao clicar no botão de fechar
         document.querySelectorAll('.modal-close').forEach(closeBtn => {
             closeBtn.addEventListener('click', function() {
@@ -2613,9 +2653,15 @@
             });
         });
 
+        // Copiar código PIX
+        const pixCodeElement = document.getElementById('pix-code');
+        if (pixCodeElement) {
+            pixCodeElement.addEventListener('click', copyPixCode);
+        }
+
         // Inicializar preços
         updatePrices();
     });
-</script>
+    </script>
 </body>
 </html>
