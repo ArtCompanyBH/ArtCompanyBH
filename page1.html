@@ -37,8 +37,8 @@
     
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #e67e22;
+            --primary-color: #000000;
+            --secondary-color: #b8860b;
             --accent-color: #3498db;
             --light-color: #f9f9f9;
             --dark-color: #2c3e50;
@@ -1699,9 +1699,8 @@
                 <p class="product-subtitle">Arte exclusiva em alta resolução - Feito à mão</p>
                 
                 <div class="product-price-container">
-                    <span class="product-price" id="dynamic-price">R$ 24,90</span>
-                    <span class="product-original-price">R$ 29,90</span>
-                    <span class="product-discount" id="discount-percentage">16% OFF</span>
+                    <span><strong>R$</strong></span><span class="product-price" id="dynamic-price">R$ 24,90</span>
+                    
                 </div>
                 
                 <div class="product-rating">
@@ -1863,36 +1862,12 @@
                         <i class="fas fa-credit-card"></i> Comprar Agora
                     </button>
                     <button class="pix-button">
-                        <i class="fas fa-qrcode"></i> Pagar com PIX
+                        <i class="fas fa-qrcode"></i> Pagar com PIX (10% de desconto)
                     </button>
-                    <button class="wishlist-button">
-                        <i class="far fa-heart"></i> Favoritar
-                    </button>
+                  
                 </div>
 
-                <!-- Informações de Entrega -->
-                <div class="delivery-info">
-                    <div class="delivery-header">
-                        <span class="delivery-icon">🚚</span>
-                        <h3 class="delivery-title">Entrega Rápida e Segura</h3>
-                    </div>
-                    <div class="delivery-content">
-                        <div class="delivery-item">
-                            <h4><i class="fas fa-truck"></i> Frete Grátis</h4>
-                            <p>Para compras acima de R$ 200 em todo o Brasil</p>
-                        </div>
-                        <div class="delivery-item">
-                            <h4><i class="fas fa-clock"></i> Entrega Expressa</h4>
-                            <p>Receba em até 3 dias úteis para Belo Horizonte</p>
-                        </div>
-                        <div class="delivery-item">
-                            <h4><i class="fas fa-shield-alt"></i> Compra Segura</h4>
-                            <p>Seu pagamento está 100% protegido</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                
 
         <!-- Tabs de Informações -->
         <div class="product-tabs">
@@ -2112,34 +2087,20 @@
             </div>
         </div>
 
-        <!-- Selos de Confiança -->
-        <div class="trust-badges">
-            <div class="trust-badge">
-                <div class="badge-icon">✓</div>
-                <div class="badge-text">Produto Original</div>
-            </div>
-            <div class="trust-badge">
-                <div class="badge-icon">🔒</div>
-                <div class="badge-text">Compra Segura</div>
-            </div>
-            <div class="trust-badge">
-                <div class="badge-icon">🔄</div>
-                <div class="badge-text">7 Dias para Troca</div>
-            </div>
-        </div>
+      
 
         <!-- Modal de Pagamento -->
         <div class="modal-overlay" id="paymentModal">
             <div class="modal-container">
                 <span class="modal-close">&times;</span>
                 <h2 class="modal-title">Finalizar Compra</h2>
-                <p>Total: <strong>R$ <span id="modal-total-price">24,90</span></strong></p>
+                <p>Total: <strong>R$ <span id="modal-total-price">24,90</span> + FRETE</strong></p> 
                 
                 <div class="payment-options">
                     <div class="payment-method active" onclick="selectPaymentMethod(this, 'credit')">
                         <i class="fas fa-credit-card"></i>
                         <div class="payment-info">
-                            <h3>Cartão de Crédito</h3>
+                            <h3>Cartão de Crédito ou Débito</h3>
                             <p>Parcelamento em até 12x sem juros</p>
                         </div>
                     </div>
